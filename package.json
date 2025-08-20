@@ -7,9 +7,17 @@
   "name": "fnb-projects",
   "private": true,
   "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
     "@types/bun": "latest"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./dist/output.css --minify && cp src/index.html dist/",
+    "watch": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "bun run watch"
   },
   "peerDependencies": {
     "typescript": "^5"
-  }
+  },
+  "module": "src/index.ts",
+  "type": "module"
 }
