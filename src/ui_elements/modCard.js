@@ -11,14 +11,50 @@ export class ModCard extends HTMLElement {
         const logoSrc = this.getAttribute("logo-src") || "assets/images/logos/" + this.id + ".png";
         const iconSrc = this.getAttribute("icon-src") || "assets/images/icons/" + this.id + ".png";
         const modName = this.getAttribute("mod-name") || this.textContent || "Mod Name";
-        const mcVersions = this.getAttribute("mc-versions") || "1.20.1";
-        const modLoader = this.getAttribute("mod-loader") || "NeoForge";
-        const description = this.getAttribute("description") || "An amazing Minecraft mod.";
-        const curseforgeUrl = `https://www.curseforge.com/minecraft/mc-mods/${this.getAttribute("modId")}` || "#";
-        const modrinthUrl = `https://modrinth.com/mod/${this.getAttribute("modId")}` || "#";
+        const mcVersions = this.getAttribute("mc-versions");
+        const modLoader = this.getAttribute("mod-loader");
+        const description = this.getAttribute("description") || "";
+        const curseforgeUrl = `https://www.curseforge.com/minecraft/mc-mods/${this.getAttribute("modId")}`;
+        const modrinthUrl = `https://modrinth.com/mod/${this.getAttribute("modId")}`;
 
         // Clear existing content
         this.innerHTML = '';
+
+        const mcBadge = mcVersions
+            ? `<span class="px-3 py-1 bg-gradient-to-r from-green-600 to-green-500 text-white text-xs font-semibold rounded-full shadow-sm">
+                MC ${mcVersions}
+           </span>`
+            : "";
+        const verBadge = modLoader
+            ? this.renderLoaderBadges(modLoader)
+            : "";
+
+        const cfButton = this.getAttribute("curseforge-id")
+            ? `<button onclick="window.open('${curseforgeUrl}', '_blank')"
+                    class="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-semibold py-3 px-4 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-0.5 rounded-bl-2xl">
+                <i class="fab fa-dev text-lg"></i>
+                <span>CurseForge</span>
+            </button>`
+            : "";
+
+        const modrinthButton = this.getAttribute("modrinth-id")
+            ? `<button onclick="window.open('${modrinthUrl}', '_blank')"
+                    class="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white font-semibold py-3 px-4 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-0.5 rounded-br-2xl">
+                <i class="fas fa-download text-lg"></i>
+                <span>Modrinth</span>
+            </button>`
+            : "";
+
+        const downloadCount = (this.getAttribute("curseforge-id") || this.getAttribute("modrinth-id"))
+            ? `<div class="grid grid-cols-1 gap-4 mb-6 text-center px-6">
+                <div class="bg-gray-700/50 rounded-lg p-3">
+                    <div id="download-count" class="text-green-400 font-bold text-lg">Loading...</div>
+                    <div class="text-gray-400 text-xs select-none">Downloads</div>
+                </div>
+            </div>`
+            : `<div class="px-5 pb-4">
+                <img src="assets/images/coming_soon.png" alt="Coming Soon">
+            </div>`;
 
         // Create the card HTML
         this.innerHTML = `
@@ -45,11 +81,9 @@ export class ModCard extends HTMLElement {
                     </div>
                     
                     <!-- Badges Section -->
-                    <div class="flex flex-wrap justify-center gap-2 mb-2 select-none">
-                        <span class="px-3 py-1 bg-gradient-to-r from-green-600 to-green-500 text-white text-xs font-semibold rounded-full shadow-sm">
-                            MC ${mcVersions}
-                        </span>
-                        ${this.renderLoaderBadges(modLoader)}
+                    <div class="flex flex-wrap justify-center gap-2 select-none">
+                        ${mcBadge}
+                        ${verBadge}
                     </div>
                 </div>
 
@@ -59,25 +93,12 @@ export class ModCard extends HTMLElement {
                 </div>
 
                 <!-- Stats -->
-                <div class="grid grid-cols-1 gap-4 mb-6 text-center px-6">
-                    <div class="bg-gray-700/50 rounded-lg p-3">
-                        <div id="download-count" class="text-green-400 font-bold text-lg">Loading...</div>
-                        <div class="text-gray-400 text-xs select-none">Downloads</div>
-                    </div>
-                </div>
+                ${downloadCount}
 
                 <!-- Buttons -->
                 <div class="grid grid-cols-2 mt-auto select-none">
-                    <button onclick="window.open('${curseforgeUrl}', '_blank')"
-                            class="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-semibold py-3 px-4 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-0.5 rounded-bl-2xl">
-                        <i class="fab fa-dev text-lg"></i>
-                        <span>CurseForge</span>
-                    </button>
-                    <button onclick="window.open('${modrinthUrl}', '_blank')"
-                            class="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white font-semibold py-3 px-4 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-0.5 rounded-br-2xl">
-                        <i class="fas fa-download text-lg"></i>
-                        <span>Modrinth</span>
-                    </button>
+                    ${cfButton}
+                    ${modrinthButton}
                 </div>
             </div>
         `;

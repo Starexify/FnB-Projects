@@ -1,7 +1,7 @@
 export class NavBar extends HTMLElement {
     connectedCallback() {
         this.render();
-        window.addEventListener('resize', () => this.render());
+            window.addEventListener('resize', () => this.render());
     }
 
     render() {

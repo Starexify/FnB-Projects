@@ -2,6 +2,8 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.9",
     "bun-plugin-tailwind": "^0.0.15",
+    "jsdom": "^26.1.0",
+    "node-fetch": "^3.3.2",
     "tailwindcss": "^4.1.12"
   },
   "name": "fnb-projects",
