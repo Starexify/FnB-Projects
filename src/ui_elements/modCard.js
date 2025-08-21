@@ -67,7 +67,7 @@ export class ModCard extends HTMLElement {
                 </div>
 
                 <!-- Buttons -->
-                <div class="grid grid-cols-2 mt-auto">
+                <div class="grid grid-cols-2 mt-auto select-none">
                     <button onclick="window.open('${curseforgeUrl}', '_blank')"
                             class="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-semibold py-3 px-4 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-0.5 rounded-bl-2xl">
                         <i class="fab fa-dev text-lg"></i>

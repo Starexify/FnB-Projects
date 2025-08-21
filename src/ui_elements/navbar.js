@@ -16,7 +16,7 @@ export class NavBar extends HTMLElement {
         const activeIndex = links.findIndex(link => link.href.split("/").pop() === currentPage);
 
         let html = `
-        <div class="flex-col items-center hidden md:flex">
+        <div class="flex flex-col items-center">
             <div class="dark:bg-slate-800 h-20 px-16 mr-8 mb-7 pl-10 rounded-b-2xl flex items-center select-none text-slate-300 text-xl font-bold">
                 <img src="assets/images/icon.png" alt="F&B Logo" class="w-32 h-32 object-contain mr-8">
         `;
