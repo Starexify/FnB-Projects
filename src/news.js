@@ -5,7 +5,7 @@ export const articlesData = [
     {
         type: "website",
         modName: "F&B Projects Hub",
-        title: "New Website Features",
+        title: "The Release Of The Official F&B Website",
         date: "August 23, 2025",
         description: "The launch of the F&B Projects Hub website!",
         badgeColor: "bg-indigo-600",
