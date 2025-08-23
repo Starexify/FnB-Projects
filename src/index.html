@@ -10,13 +10,190 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-900 text-white flex flex-col">
-<nav-bar></nav-bar>
+<body class="bg-gray-900 text-white">
+<nav-bar class="opacity-0 invisible transition-all duration-300 ease-in-out"></nav-bar>
 
-<div class="h-auto mt-10 p-10">
-    <img src="assets/images/coming_soon.png" alt="Coming Soon">
-</div>
+<!-- Navigation Grid Section -->
+<section class="min-h-screen flex items-center justify-center -mt-4 md:-mt-38">
+    <div class="max-w-4xl mx-auto px-5">
+        <div class="text-center mb-8">
+            <img src="assets/images/icon.png" class="mx-auto -mb-6 size-1/2">
+            <fancy-title>Explore F&B Projects</fancy-title>
+            <p class="text-slate-400 text-lg">Everything you need to know about our projects</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- News Card -->
+            <a href="news.html" class="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-lg p-6 transition-all duration-300 text-center">
+                <div class="size-16 bg-blue-600 group-hover:bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 transition-colors">
+                    <svg class="size-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">News</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Stay up-to-date with the latest announcements, updates, and releases from F&B Projects.</p>
+            </a>
+
+            <!-- Projects Card -->
+            <a href="projects.html" class="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-lg p-6 transition-all duration-300 text-center">
+                <div class="size-16 bg-purple-600 group-hover:bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 transition-colors">
+                    <svg class="size-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">Projects</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Explore our collection of Minecraft mods for Forge, NeoForge, and Fabric platforms.</p>
+            </a>
+
+            <!-- Wiki Card -->
+            <a href="wikis.html" class="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-lg p-6 transition-all duration-300 text-center">
+                <div class="size-16 bg-red-600 group-hover:bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-4 transition-colors">
+                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">Wikis (WIP)</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Find detailed documentation, guides, and information about all our mods and features.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="bg-slate-800/30 py-16">
+    <div class="max-w-4xl mx-auto px-5 text-center">
+        <fancy-title>About F&B Projects</fancy-title>
+        <div class="max-w-3xl mx-auto">
+            <p class="text-lg text-slate-400 leading-relaxed mb-8">
+                We are 2 collaborative Minecraft mod creators who started to create mods together for fun
+                and then publishing them on the modding platforms Curseforge and Modrinth for everyone to enjoy.
+                This website was made with the purpose of helping the community be up-to-date and informed about all our news, projects and wikis.
+            </p>
+            <p class="text-lg text-slate-400 leading-relaxed mb-2">
+                We create mods for:
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <span class="bg-slate-700 text-slate-300 px-4 py-2 rounded-full text-sm">Minecraft Forge</span>
+                <span class="bg-slate-700 text-slate-300 px-4 py-2 rounded-full text-sm">NeoForge</span>
+                <span class="bg-slate-700 text-slate-300 px-4 py-2 rounded-full text-sm">Fabric</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="bg-slate-800/50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-2 gap-8 text-center">
+            <div class="transform hover:scale-105 transition-transform duration-300">
+                <div class="text-4xl md:text-5xl font-bold text-blue-400 mb-2">8</div>
+                <div class="text-slate-400 text-sm md:text-base">Active Mods</div>
+            </div>
+            <div class="transform hover:scale-105 transition-transform duration-300">
+                <downloads-counter></downloads-counter>
+                <div class="text-slate-400 text-sm md:text-base">Total Downloads</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community Section -->
+<section class="max-w-6xl mx-auto py-16 px-5">
+    <div class="text-center mb-12">
+        <fancy-title>Join Our Community</fancy-title>
+        <p class="text-slate-400 text-lg">Connect with us across multiple platforms</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6">
+        <a href="https://www.reddit.com/r/Foxirions_Forge" class="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-lg p-6 transition-all duration-300 min-w-48">
+            <div class="text-center">
+                <div class="size-12 bg-orange-600 group-hover:bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-3 transition-colors">
+                    <svg class="p-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 30 30">
+                        <path fill-rule="evenodd" d="M 17.662109 2 C 15.565005 2 14 3.7131367 14 5.6621094 L 14 9.0351562 C 11.24971 9.1810926 8.7344872 9.9143634 6.7265625 11.064453 C 5.9527826 10.321405 4.9166871 9.991448 3.9121094 9.9921875 C 2.8229214 9.9929893 1.7094525 10.370413 0.94140625 11.234375 L 0.92382812 11.253906 L 0.90625 11.273438 C 0.16947928 12.194228 -0.12225605 13.427747 0.07421875 14.652344 C 0.25365009 15.770711 0.90137168 16.893419 2.0273438 17.628906 C 2.0199689 17.753058 2 17.874618 2 18 C 2 22.962 7.832 27 15 27 C 22.168 27 28 22.962 28 18 C 28 17.874618 27.980031 17.753058 27.972656 17.628906 C 29.098628 16.893419 29.74635 15.770711 29.925781 14.652344 C 30.122256 13.427747 29.830521 12.194228 29.09375 11.273438 L 29.076172 11.253906 L 29.058594 11.234375 C 28.290448 10.370294 27.177168 9.9929893 26.087891 9.9921875 C 25.08323 9.991448 24.046988 10.321133 23.273438 11.064453 C 21.265513 9.9143634 18.75029 9.1810926 16 9.0351562 L 16 5.6621094 C 16 4.6830821 16.565214 4 17.662109 4 C 18.182797 4 18.817104 4.2609042 19.810547 4.609375 C 20.650361 4.9039572 21.743308 5.2016984 23.140625 5.2910156 C 23.474875 6.2790874 24.402814 7 25.5 7 C 26.875 7 28 5.875 28 4.5 C 28 3.125 26.875 2 25.5 2 C 24.561213 2 23.747538 2.5304211 23.320312 3.3007812 C 22.125831 3.2346294 21.248238 2.9947078 20.472656 2.7226562 C 19.568849 2.4056271 18.738422 2 17.662109 2 z M 3.9121094 11.992188 C 4.3072494 11.991896 4.6826692 12.095595 4.9921875 12.263672 C 3.8881963 13.18517 3.0505713 14.261821 2.5449219 15.4375 C 2.2764358 15.106087 2.114647 14.734002 2.0507812 14.335938 C 1.9430146 13.664243 2.1440212 12.966045 2.4628906 12.552734 C 2.7642172 12.228395 3.3144613 11.992626 3.9121094 11.992188 z M 26.085938 11.992188 C 26.683756 11.992627 27.235874 12.22849 27.537109 12.552734 C 27.855979 12.966045 28.056985 13.664243 27.949219 14.335938 C 27.885353 14.734002 27.723564 15.106087 27.455078 15.4375 C 26.949429 14.261821 26.111804 13.18517 25.007812 12.263672 C 25.316626 12.095792 25.690955 11.991896 26.085938 11.992188 z M 10 14 C 11.105 14 12 14.895 12 16 C 12 17.105 11.105 18 10 18 C 8.895 18 8 17.105 8 16 C 8 14.895 8.895 14 10 14 z M 20 14 C 21.105 14 22 14.895 22 16 C 22 17.105 21.105 18 20 18 C 18.895 18 18 17.105 18 16 C 18 14.895 18.895 14 20 14 z M 20.238281 19.533203 C 19.599281 21.400203 17.556 23 15 23 C 12.444 23 10.400719 21.400969 9.7617188 19.667969 C 10.911719 20.600969 12.828 21.267578 15 21.267578 C 17.172 21.267578 19.088281 20.600203 20.238281 19.533203 z"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-white mb-2">Reddit</h3>
+                <p class="text-slate-400 text-sm">Join our subreddit thread</p>
+            </div>
+        </a>
+
+        <a href="https://x.com/FoxiStar9" class="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-lg p-6 transition-all duration-300 min-w-48">
+            <div class="text-center">
+                <div class="size-12 bg-black group-hover:bg-gray-800 rounded-lg flex items-center justify-center mx-auto mb-3 transition-colors">
+                    <svg class="p-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 30 30">
+                        <path fill-rule="evenodd" d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-white mb-2">X</h3>
+                <p class="text-slate-400 text-sm">Follow us on X</p>
+            </div>
+        </a>
+
+        <a href="https://github.com/Starexify?tab=repositories" class="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-lg p-6 transition-all duration-300 min-w-48">
+            <div class="text-center">
+                <div class="size-12 bg-gray-600 group-hover:bg-gray-500 rounded-lg flex items-center justify-center mx-auto mb-3 transition-colors">
+                    <svg class="p-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-white mb-2">GitHub</h3>
+                <p class="text-slate-400 text-sm">View source code</p>
+            </div>
+        </a>
+
+        <a href="https://www.curseforge.com/members/imverybad/projects" class="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-lg p-6 transition-all duration-300 min-w-48">
+            <div class="text-center">
+                <div class="size-12 bg-orange-600 group-hover:bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-3 transition-colors">
+                    <svg class="p-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="m6.307 5.581.391 1.675H0s.112.502.167.558c.168.279.335.614.559.837 1.06 1.228 2.902 1.73 4.409 2.009 1.06.224 2.121.28 3.181.335l1.228 3.293h.67l.391 1.061h-.558l-.949 3.07h9.321l-.949-3.07h-.558l.39-1.061h.67s.558-3.404 2.288-4.967C21.935 7.758 24 7.535 24 7.535V5.581H6.307zm9.377 8.428c-.447.279-.949.279-1.284.503-.223.111-.335.446-.335.446-.223-.502-.502-.67-.837-.781-.335-.112-.949-.056-1.786-.782-.558-.502-.614-1.172-.558-1.507v-.167c0-.056 0-.112.056-.168.111-.334.39-.669.948-.893 0 0-.39.559 0 1.117.224.335.67.502 1.061.279.167-.112.279-.335.335-.503.111-.39.111-.781-.224-1.06-.502-.446-.613-1.06-.279-1.451 0 0 .112.502.614.446.335 0 .335-.111.224-.223-.056-.167-.782-1.228.279-2.009 0 0 .669-.447 1.451-.391-.447.056-.949.335-1.116.782v.055c-.168.447-.056.949.279 1.396.223.335.502.614.614 1.06-.168-.056-.279 0-.391.112a.533.533 0 0 0-.112.502c.056.112.168.223.279.223h.168c.167-.055.279-.279.223-.446.112.111.167.391.112.558 0 .167-.112.335-.168.446-.056.112-.167.224-.223.335-.056.112-.112.224-.112.335 0 .112 0 .279.056.391.223.335.67 0 .782-.279.167-.335.111-.726-.112-1.061 0 0 .391.224.67 1.005.223.67-.168 1.451-.614 1.73z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-white mb-2">CurseForge</h3>
+                <p class="text-slate-400 text-sm">Download our mods</p>
+            </div>
+        </a>
+
+        <a href="https://modrinth.com/collection/Z8kWlmg3" class="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-lg p-6 transition-all duration-300 min-w-48">
+            <div class="text-center">
+                <div class="size-12 bg-green-600 group-hover:bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-3 transition-colors">
+                    <svg class="p-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 514 514">
+                        <path fill-rule="evenodd" d="M504.16 323.56c11.39-42.09 12.16-87.65.04-132.8C467.57 54.23 327.04-26.8 190.33 9.78 84.81 38.02 12.39 128.07 1.69 230.47h43.3c10.3-83.14 69.75-155.74 155.76-178.76 106.3-28.45 215.38 28.96 253.42 129.67l-42.14 11.27c-19.39-46.85-58.46-81.2-104.73-95.83l-7.74 43.84c36.53 13.47 66.16 43.84 77 84.25 15.8 58.89-13.62 119.23-67 144.26l11.53 42.99c70.16-28.95 112.31-101.86 102.34-177.02l41.98-11.23a210.2 210.2 0 0 1-3.86 84.16z"/><path fill-rule="evenodd" d="M322.99 504.22C186.27 540.8 45.75 459.77 9.11 323.24A257.6 257.6 0 0 1 1 275.46h43.27c1.09 11.91 3.2 23.89 6.41 35.83 3.36 12.51 7.77 24.46 13.11 35.78l38.59-23.15a169 169 0 0 1-8.17-23.45c-24.04-89.6 29.2-181.7 118.92-205.71 17-4.55 34.1-6.32 50.8-5.61L256.19 133c-10.46.05-21.08 1.42-31.66 4.25-66.22 17.73-105.52 85.7-87.78 151.84 1.1 4.07 2.38 8.04 3.84 11.9l49.35-29.61-14.87-39.43 46.6-47.87 58.9-12.69 17.05 20.99-27.15 27.5-23.68 7.45-16.92 17.39 8.29 23.07s16.79 17.84 16.82 17.85l23.72-6.31 16.88-18.54 36.86-11.67 10.98 24.7-38.03 46.63-63.73 20.18-28.58-31.82-49.82 29.89c25.54 29.08 63.94 45.23 103.75 41.86l11.53 42.99c-59.41 7.86-117.44-16.73-153.49-61.91l-38.41 23.04c50.61 66.49 138.2 99.43 223.97 76.48 61.74-16.52 109.79-58.6 135.81-111.78l42.64 15.5c-30.89 66.28-89.84 118.94-166.07 139.34"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-white mb-2">Modrinth</h3>
+                <p class="text-slate-400 text-sm">Download our mods</p>
+            </div>
+        </a>
+    </div>
+</section>
 
 <fnb-footer class="bg-white dark:bg-gray-900 w-full"></fnb-footer>
+
+<script>
+    // Custom script for this page only - hide navbar until scrolled past first section
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('nav-bar');
+        const firstSection = document.querySelector('section');
+
+        function handleScroll() {
+            const firstSectionBottom = firstSection.offsetTop + firstSection.offsetHeight;
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition >= firstSectionBottom - 100) {
+                navbar.classList.remove('opacity-0', 'invisible');
+                navbar.classList.add('opacity-100', 'visible');
+            } else {
+                navbar.classList.remove('opacity-100', 'visible');
+                navbar.classList.add('opacity-0', 'invisible');
+            }
+        }
+
+        // Listen for scroll events
+        window.addEventListener('scroll', handleScroll);
+
+        // Check initial position
+        handleScroll();
+    });
+</script>
 </body>
 </html>

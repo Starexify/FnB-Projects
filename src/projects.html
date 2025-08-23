@@ -10,11 +10,14 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-900 text-white flex flex-col items-center">
+<body class="bg-gray-900 text-white items-center">
 <nav-bar></nav-bar>
 
-<div>
-    <h1 class="text-4xl mb-4 font-bold text-white text-center md:mt-0 mt-10">Mods</h1>
+<div class="flex flex-col items-center py-8">
+    <!-- Header Section -->
+    <fancy-title>Mods</fancy-title>
+
+    <!-- Mod Cards Grid -->
     <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-5 p-5 justify-center">
         <mod-card id="bsr" modId="big-swords-r" curseforge-id="690473" modrinth-id="edrOLdWE" mc-versions="1.12 - 1.21.5" mod-loader="Forge/NeoForge/Fabric" description="Adds BIG swords, glaives, scythes and shields to the game">Big Swords R</mod-card>
         <mod-card id="cosmicore" modId="cosmicore" curseforge-id="1057420" modrinth-id="I6sYca4V" mc-versions="1.21 - 1.21.5" mod-loader="NeoForge" description='Explore the world for the strange space stones, but beware the skies because- <span class="text-red-500 font-bold animate-pulse">METEORS INCOMING!</span>'>Cosmicore</mod-card>
@@ -24,10 +27,12 @@
         <mod-card id="realitymod" modId="realitymod" curseforge-id="1102155" modrinth-id="Miwb8ahh" mc-versions="1.20 - 1.21.1" mod-loader="Forge/NeoForge" description="Aims to enhance the game's biomes, mobs and mechanics. It's currently undergoing a major overhaul, featuring new textures, models, and more realistic gameplay elements.">RealityMod</mod-card>
         <mod-card id="nmt" modId="nmt" curseforge-id="1078643" modrinth-id="GQfEkske" mc-versions="1.21 - 1.21.4" mod-loader="NeoForge" description="This mod adds some THINGS">No More Things</mod-card>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <h1 class="text-4xl mb-4 font-bold text-white text-center">Addons</h1>
+</div>
+<hr class="mx-auto w-full max-w-screen-xl my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+<div class="flex flex-col items-center py-8">
+    <fancy-title>Addons</fancy-title>
     <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-5 p-5 justify-center select-none">
-        <mod-card id="bsrxcc" modId="bsrxcc" curseforge-id="1144559" modrinth-id="EIVp5T0t" mc-versions="1.12 - 1.21.5" mod-loader="NeoForge" description="Adds compatibility between Big Swords R and Cosmicore">Big Swords R x Cosmicore</mod-card>
+        <mod-card id="bsrxcc" modId="bsrxcc" curseforge-id="1144559" modrinth-id="EIVp5T0t" mc-versions="1.21 - 1.21.5" mod-loader="NeoForge" description="Adds compatibility between Big Swords R and Cosmicore">Big Swords R x Cosmicore</mod-card>
         <mod-card id="hgw" modId="hgw" description="Addon for Hexxit Gear R, introducing unique weapons designed to complement each armor set.">Hexxit Gear Weaponry</mod-card>
     </div>
 </div>
