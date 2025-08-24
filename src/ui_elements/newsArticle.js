@@ -1,6 +1,7 @@
 export class NewsArticle extends HTMLElement {
     tagColors = {
         "New Features": "bg-blue-600/20 text-blue-300",
+        "Mod Release": "bg-green-600/20 text-green-300",
         "Bug Fixes": "bg-red-600/20 text-red-300",
         "Port": "bg-slate-200/20 text-slate-300",
         "Backport": "bg-slate-200/20 text-slate-300",

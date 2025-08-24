@@ -13,8 +13,8 @@ export class DownloadsCounter extends DownloadsElement {
 
     setupIds() {
         this.setIds({
-            modrinth: ["big-swords-r", "cosmicore", "hexxit-gear-r", "tmml", "mystic-shrubs", "realitymod", "nmt", "bsrxcc"],
-            curseforge: ["690473", "1057420", "376883", "1133923", "1074868", "1102155", "1078643", "1144559"]
+            modrinth: ["big-swords-r", "cosmicore", "hexxit-gear-r", "tmml", "mystic-shrubs", "realitymod", "nmt", "bsrxcc", "hgw"],
+            curseforge: ["690473", "1057420", "376883", "1133923", "1074868", "1102155", "1078643", "1144559", "1206796"]
         });
     }
 }

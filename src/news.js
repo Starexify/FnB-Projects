@@ -3,6 +3,26 @@ import { NewsArticle } from "./ui_elements/newsArticle.js";
 // Articles data - easy to modify and add new ones!
 export const articlesData = [
     {
+        type: "mod",
+        modName: "Hexxit Gear Weaponry",
+        version: "v1.0.0 for Fabric & NeoForge 1.21.8",
+        title: "The first Hexxit Gear R addon !",
+        date: "August 24, 2025",
+        description: "The release of the first Hexxit Gear R addon is here! Bringing back the scrapped Scale Sword idea with new features!",
+        iconUrl: "assets/images/icons/hgw.png",
+        badgeColor: "bg-green-600",
+        badgeText: "v1.0.0 for 1.21.8 Released",
+        tags: "Mod Release",
+        primaryAction: "Download",
+        curseforgeUrl: "https://www.curseforge.com/minecraft/mc-mods/hgw/files/all?page=1&pageSize=20&version=1.21.8",
+        modrinthUrl: "https://modrinth.com/mod/hgw/versions?g=1.21.8",
+        secondaryAction: "Changelog",
+        changelogContent: `## Weapons
+### Scale Sword
+- Special: blocking ability, only works when wearing the full Scale Armor Set
+- Blocking Ability: lets you block front attacks when right clicking but uses your armor's durability instead. When the player stops blocking, after being hit 3-4 times it knocks back enemies and goes on cooldown`
+    },
+    {
         type: "website",
         modName: "F&B Projects Hub",
         title: "The Release Of The Official F&B Website",
