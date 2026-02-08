@@ -338,11 +338,11 @@ document.addEventListener("DOMContentLoaded", () => {
             description: "",
             craftingType: "smithing",
             recipe: {
-                base: "https://github.com/Starexify/BigSwordsR/raw/1.21.4-neo/src/main/resources/assets/big_swords/textures/item/diamond_big_sword.png",
+                base: "https://github.com/Starexify/BigSwordsR/raw/1.21.4-neo/src/main/resources/assets/big_swords/textures/item/obsidian_big_sword.png",
                 addition: "https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/ender_eye.png",
                 template: "https://github.com/Starexify/BigSwordsR/raw/1.21.4-neo/src/main/resources/assets/big_swords/textures/item/ender_upgrade_smithing_template.png"
             },
-            materials: "Ender Upgrade (found in End Cities) + Diamond Big Sword + Eye of Ender",
+            materials: "Ender Upgrade (found in End Cities) + Obsidian Big Sword + Eye of Ender",
             specialNotes: ""
         },
         {
