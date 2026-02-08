@@ -1088,7 +1088,7 @@ document.addEventListener("DOMContentLoaded", () => {
             craftingType: "crafting",
             recipe: {
                 pattern: [
-                    ["https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/iron_ingot.png", "https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/iron_ingot", "https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/stick.png"],
+                    ["https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/iron_ingot.png", "https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/iron_ingot.png", "https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/stick.png"],
                     ["", "https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/stick.png", "https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/iron_ingot.png"],
                     ["https://github.com/misode/mcmeta/raw/assets/assets/minecraft/textures/item/stick.png", "", ""]
                 ]
