@@ -1,22 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon"
-          href="https://github.com/Starexify/starexify.github.io/blob/main/src/assets/images/icon.png?raw=true">
-    <title>F&B Projects Hub</title>
+          href="https://github.com/Starexify/starexify.github.io/blob/main/src/assets/images/icon.png?raw=true" />
+    <title>F&B Wikis Hub</title>
+
     <script type="module" src="ui.js" defer></script>
-    <link href="./output.css" rel="stylesheet">
+    <script type="module" src="./ui_elements/wikiCard.js" defer></script>
+    <script type="module" src="./ui_elements/comingSoonCard.js" defer></script>
+    <link href="./output.css" rel="stylesheet" />
 </head>
 
 <body class="bg-gray-900 text-white">
 <nav-bar></nav-bar>
 
-<div class="h-auto mt-10 p-10">
-    <img src="assets/images/coming_soon.png" alt="Coming Soon">
+<div class="flex flex-col items-center py-8">
+    <fancy-title>Wikis</fancy-title>
+    <p class="text-slate-400 text-lg text-center max-w-2xl">
+        The hub for all our projects’ information and documentation in one place.
+    </p>
 </div>
 
+<div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 p-5 md:px-24 justify-center">
+    <!-- Mods -->
+    <wiki-card id="bsr" wiki-id="big-swords-r" modId="big-swords-r"
+               description="Comprehensive guide to all Big Swords R mechanics, items, and progression."
+               wip>
+        Big Swords R
+    </wiki-card>
+
+    <wiki-card id="cosmicore" wiki-id="cosmicore" modId="cosmicore"
+               description="Learn everything about meteors, cosmic stones, and new worldgen."
+               wip>
+        Cosmicore
+    </wiki-card>
+
+    <wiki-card id="hgr" wiki-id="hexxit-gear-r" modId="hexxit-gear-r"
+               description="Everything about Hexxit Gear R armor sets and crafting."
+               wip>
+        Hexxit Gear R
+    </wiki-card>
+
+    <wiki-card id="tmml" wiki-id="tmml" modId="tmml"
+               icon-src="assets/images/icons/tmml.gif"
+               description="Transport Modules: Modular Logistics wiki covering modular logistics networks and setup."
+               wip>
+        Transport Modules: Modular Logistics
+    </wiki-card>
+
+    <wiki-card id="mystic_shrubs" wiki-id="mystic-shrubs" modId="mystic-shrubs"
+               description="Mystic Shrubs spawning, loot tables, and usage tips."
+               wip>
+        Mystic Shrubs
+    </wiki-card>
+
+    <wiki-card id="realitymod" wiki-id="realitymod" modId="realitymod"
+               description="Biome, mob, and mechanic overhaul documentation."
+               wip>
+        RealityMod
+    </wiki-card>
+
+    <wiki-card id="nmt" wiki-id="nmt" modId="nmt"
+               description="Details about the mysterious 'No More Things' mod."
+               wip>
+        No More Things
+    </wiki-card>
+
+    <!-- Addons -->
+    <wiki-card id="bsrxcc" wiki-id="bsrxcc" modId="bsrxcc"
+               description="Compatibility wiki for Big Swords R x Cosmicore."
+               wip>
+        Big Swords R x Cosmicore
+    </wiki-card>
+
+    <wiki-card id="hgw" wiki-id="hgw" modId="hgw"
+               description="Weapons add-on for Hexxit Gear R with unique weapon crafting."
+               wip>
+        Hexxit Gear Weaponry
+    </wiki-card>
+
+    <!--"Coming Soon" card at the end -->
+    <coming-soon-card></coming-soon-card>
+</div>
+
+<scroll-button></scroll-button>
 <fnb-footer class="bg-white dark:bg-gray-900 w-full"></fnb-footer>
 </body>
 </html>
