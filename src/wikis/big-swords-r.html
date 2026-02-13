@@ -242,28 +242,6 @@
                 </p>
             </div>
             <div id="changelog-container" class="space-y-10"></div>
-
-            <script>
-                document.querySelectorAll('.version-entry').forEach(entry => {
-                    const version = entry.dataset.version.toLowerCase();
-                    const circle = entry.querySelector('.version-circle');
-                    const title = entry.querySelector('.version-title');
-
-                    let colorClass = 'gray'; // fallback
-                    if (version.includes('alpha'))         colorClass = 'amber';
-                    else if (version.includes('beta'))     colorClass = 'blue';
-                    else if (version.includes('release'))  colorClass = 'green';
-                    else if (version.includes('hotfix'))   colorClass = 'red';
-                    else if (version.includes('port'))     colorClass = 'purple';
-                    else if (version.includes('bugfix'))   colorClass = 'orange';
-                    else                                   colorClass = 'green'; // assume release for numbered versions
-
-                    // Apply colors to border, circle, and title
-                    entry.classList.add(`border-${colorClass}-500`);
-                    circle.classList.add(`bg-${colorClass}-500`);
-                    title.classList.add(`text-${colorClass}-600`, `dark:text-${colorClass}-400`);
-                });
-            </script>
         </div>
 
         <!-- Big Swords Page -->
