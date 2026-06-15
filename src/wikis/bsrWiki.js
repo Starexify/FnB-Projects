@@ -75,6 +75,39 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ---------------- Big Swords R Changelog Data ---------------- */
     const changelog = [
         {
+            version: "1.0.0 [26.2.1] – Jun 16, 2026",
+            type: "release",
+            sections: [
+                {
+                    title: "Bug Fix",
+                    changes: [
+                        "Creep Block now uses correct texture for tilled and untilled",
+                        "Changed livingmetal sword attack speed from 6.4 to 1.6 to match the other swords",
+                        "Achievement background is now shown"
+                    ]
+                },
+                {
+                    title: "Minor Changes",
+                    changes: [
+                        "Achievement title is now 'Big Swords R' from 'The root of Big Swords R'"
+                    ]
+                }
+            ]
+        },
+        {
+            version: "MISSING CHANGELOGS 2024-2025",
+            type: "hotfix",
+            sections: [
+                {
+                    title: "Older Missing Changelogs for the older versions will be ported soon for years:",
+                    changes: [
+                        "2024",
+                        "2025",
+                    ]
+                }
+            ]
+        },
+        {
             version: "1.0.0-beta [1.21] – Aug 17, 2024",
             type: "beta",
             sections: [
