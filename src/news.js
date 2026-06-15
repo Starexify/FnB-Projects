@@ -4,6 +4,35 @@ import { NewsArticle } from "./ui_elements/newsArticle.js";
 export const articlesData = [
     {
         type: "mod",
+        modName: "Big Swords R",
+        version: "v1.0.0 for NeoForge 26.1.2",
+        title: "Ported to Latest",
+        date: "June 16, 2026",
+        description: "We're back with a new version of Big Swords R after a long break.",
+        iconUrl: "assets/images/icons/bsr.png",
+        badgeColor: "bg-green-600",
+        badgeText: "v1.0.0 for 26.1.2 Released",
+        tags: "Port,Adjustment,Bug Fixes",
+        primaryAction: "Download",
+        curseforgeUrl: "https://www.curseforge.com/minecraft/mc-mods/big-swords-r/files/8255333",
+        modrinthUrl: "https://modrinth.com/mod/big-swords-r/version/AQlpuah1",
+        secondaryAction: "Changelog",
+        changelogContent: `
+## Creep Block
+- now uses correct texture when tilled and untilled
+
+## Livingmetal Sword
+- lowered attack speed from 6.4 to 1.6 to match the other swords
+
+## Achievements
+- Achievement title is now 'Big Swords R' from 'The root of Big Swords R'
+- Achievement background is now shown
+
+# Extra
+- ported everything to NeoForge 26.1.2`
+    },
+    {
+        type: "mod",
         modName: "Hexxit Gear Weaponry",
         version: "v1.0.0 for Fabric & NeoForge 1.21.8",
         title: "The first Hexxit Gear R addon !",
