@@ -11,7 +11,7 @@ export class FnBFooter extends HTMLElement {
                 <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700" />
                 <div class="flex justify-between">
                     <div class="grid grid-rows-3 gap-1">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">© 2024-2025 <a href="https://starexify.github.io/FnB-Projects/src" class="hover:underline">F&B Projects</a>.</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">© 2024-2026 <a href="https://starexify.github.io/FnB-Projects/src" class="hover:underline">F&B Projects</a>.</span>
                         <span class="text-sm text-gray-500 dark:text-gray-400">Code licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" class="hover:underline">MIT License</a>.</span>
                         <span class="text-sm text-gray-500 dark:text-gray-400">Powered by GitHub Pages</span>
                     </div>

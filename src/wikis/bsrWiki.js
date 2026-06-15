@@ -1784,7 +1784,7 @@ document.addEventListener("DOMContentLoaded", () => {
             type: "weapon",
             damage: 6,
             hearts: 3,
-            speed: 6.4,
+            speed: 1.6,
             durability: 375,
             craftingType: "crafting",
             recipe: {
