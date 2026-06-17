@@ -5,6 +5,70 @@ export const articlesData = [
     {
         type: "mod",
         modName: "Big Swords R",
+        version: "v1.0.0 for NeoForge 26.2",
+        title: "Ported to Latest",
+        date: "June 17, 2026",
+        description: "The latest version of BSR comes with bug fixes, adjustments but with some new items too.",
+        iconUrl: "assets/images/icons/bsr.png",
+        badgeColor: "bg-green-600",
+        badgeText: "v1.0.0 for 26.2 Released",
+        tags: "Port,Adjustment,Bug Fixes, New Content",
+        primaryAction: "Download",
+        curseforgeUrl: "https://www.curseforge.com/minecraft/mc-mods/big-swords-r/files/8267230",
+        modrinthUrl: "https://modrinth.com/mod/big-swords-r/version/ZJLBAClt",
+        secondaryAction: "Changelog",
+        changelogContent: `
+## NEW CONTENT
+- added Biomass Spear
+- added Livingmetal Spear
+- added Copper Scythe
+- added Copper Glaive
+- added Copper Big Sword
+
+## Balance Changes
+### Attack Damage Changes
+- Livingmetal Shovel: 5 -> 5.5
+- Livingmetal Sword: 6.5 -> 7
+- Livingmetal Pickaxe: 4.5 -> 5
+- Livingmetal Axe: 9.5 -> 10
+- Wooden Big Sword: 7.5 -> 8
+- Stone Big Sword: 8.5 -> 9
+- Iron Big Sword: 9.5 -> 10
+- Golden Big Sword: 7.5 -> 8
+- Diamond Big Sword: 10.5 -> 11
+- Netherite Big Sword: 11.5 -> 12
+- Obsidian Big Sword: 11 -> 10
+- Ender Big Sword: 13 -> 14
+- Biomass Big Sword: 9.5 -> 10
+- Quartz Big Sword: 8.5 -> 9
+- Livingmetal Glaive: 5.5 -> 5
+- Livingmetal Scythe: 4.5 -> 6
+- Bone Sctyhe: 1.5 -> 2
+- Soul Reaper: 1.5 -> 2
+
+### Charged Damage Changes
+- Diamond Glaive: 4.5-5.5 -> 5-6
+- Netherite Glaive: 5.5-6.5 -> 6-7
+- Biomass Glaive: 5.4-6 -> 5-6
+- Livingmetal Glaive: 4.5-5.5 -> 4-5
+- Livingmetal Scythe: 3.5-4.5 -> 5-6
+- Stone Glaive: 3.5-4.5 -> 4-5
+- Stone Scythe: 2.5-3.5 -> 3-4
+- Diamond Scythe: 3.5-4.5 -> 4-5
+- Netherite Scythe: 4.5-5.5 -> 5-6
+- Biomass Scythe: 3-4.5 -> 3-5
+
+### Drops
+- Creepers, Phantoms and Shulkers no longer drop blood
+- Breezes, Shulkers and Sulfur Cubes no longer drop souls
+
+## Extra
+- renamed 'Biomass Seed' to 'Biomass Seeds'
+- ported everything to NeoForge 26.2`
+    },
+    {
+        type: "mod",
+        modName: "Big Swords R",
         version: "v1.0.0 for NeoForge 26.1.2",
         title: "Ported to Latest",
         date: "June 16, 2026",
@@ -18,17 +82,17 @@ export const articlesData = [
         modrinthUrl: "https://modrinth.com/mod/big-swords-r/version/AQlpuah1",
         secondaryAction: "Changelog",
         changelogContent: `
-## Creep Block
+### Creep Block
 - now uses correct texture when tilled and untilled
 
-## Livingmetal Sword
+### Livingmetal Sword
 - lowered attack speed from 6.4 to 1.6 to match the other swords
 
-## Achievements
+### Achievements
 - Achievement title is now 'Big Swords R' from 'The root of Big Swords R'
 - Achievement background is now shown
 
-# Extra
+## Extra
 - ported everything to NeoForge 26.1.2`
     },
     {
