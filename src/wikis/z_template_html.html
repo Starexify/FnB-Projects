@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="MOD_ICON_URL_HERE">
-  <title>MOD_NAME Wiki</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .sidebar-transition {
-      transition: transform 0.3s ease-in-out;
-    }
-    .content-fade {
-      animation: fadeIn 0.3s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="MOD_ICON_URL_HERE">
+    <title>MOD_NAME Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sidebar-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+        .content-fade {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
 
-    /* ── Crafting Grid ── */
-    .recipe-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 50px);
-      grid-template-rows: repeat(3, 50px);
-      gap: 3px;
-      background: #374151;
-      padding: 12px;
-      border-radius: 8px;
-      border: 2px solid #4b5563;
-    }
-    .recipe-slot {
-      width: 50px;
-      height: 50px;
-      background: #1f2937;
-      border: 2px solid #4b5563;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: bold;
-      border-radius: 4px;
-    }
-    .recipe-arrow {
-      font-size: 2rem;
-      color: #9ca3af;
-      margin: 0 20px;
-      align-self: center;
-    }
+        /* ── Crafting Grid ── */
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            grid-template-rows: repeat(3, 50px);
+            gap: 3px;
+            background: #374151;
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #4b5563;
+        }
+        .recipe-slot {
+            width: 50px;
+            height: 50px;
+            background: #1f2937;
+            border: 2px solid #4b5563;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .recipe-arrow {
+            font-size: 2rem;
+            color: #9ca3af;
+            margin: 0 20px;
+            align-self: center;
+        }
 
-    /* ── Pixel-perfect item icons ── */
-    .image-render-pixel {
-      image-rendering: pixelated;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: crisp-edges;
-      -ms-interpolation-mode: nearest-neighbor;
-    }
-    .icon-32 { width: 32px; height: 32px; }
-    .icon-24 { width: 24px; height: 24px; }
-    .icon-16 { width: 16px; height: 16px; }
-  </style>
+        /* ── Pixel-perfect item icons ── */
+        .image-render-pixel {
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+        }
+        .icon-32 { width: 32px; height: 32px; }
+        .icon-24 { width: 24px; height: 24px; }
+        .icon-16 { width: 16px; height: 16px; }
+    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
@@ -67,44 +67,44 @@
      TOP NAVIGATION BAR
      ══════════════════════════════════════════════════ -->
 <nav class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-3 fixed top-0 left-0 right-0 z-50">
-  <div class="flex items-center justify-between">
-    <!-- Left: hamburger + logo -->
-    <div class="flex items-center space-x-3">
-      <button class="lg:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md" onclick="toggleSidebar()">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-      <div class="flex items-center space-x-3">
-        <img src="MOD_ICON_URL_HERE" alt="Mod Logo" class="w-8 h-8">
-        <!-- ↑ Replace MOD_ICON_URL_HERE with the icon image URL -->
-        <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">MOD_NAME Wiki</h1>
-        <!-- ↑ Replace MOD_NAME with the name of your mod -->
-      </div>
-    </div>
+    <div class="flex items-center justify-between">
+        <!-- Left: hamburger + logo -->
+        <div class="flex items-center space-x-3">
+            <button class="lg:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md" onclick="toggleSidebar()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <div class="flex items-center space-x-3">
+                <img src="MOD_ICON_URL_HERE" alt="Mod Logo" class="w-8 h-8">
+                <!-- ↑ Replace MOD_ICON_URL_HERE with the icon image URL -->
+                <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">MOD_NAME Wiki</h1>
+                <!-- ↑ Replace MOD_NAME with the name of your mod -->
+            </div>
+        </div>
 
-    <!-- Right: action buttons -->
-    <div class="flex items-center space-x-4">
-      <!-- Dark-mode toggle -->
-      <button onclick="toggleTheme()"
-              class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
-              title="Toggle dark mode">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-        </svg>
-      </button>
-      <button id="download-btn"
-              type="button"
-              class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-        Download Mod
-      </button>
-      <button id="back-btn"
-              class="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md">
-        Back to Wiki Hub
-      </button>
+        <!-- Right: action buttons -->
+        <div class="flex items-center space-x-4">
+            <!-- Dark-mode toggle -->
+            <button onclick="toggleTheme()"
+                    class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
+                    title="Toggle dark mode">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                </svg>
+            </button>
+            <button id="download-btn"
+                    type="button"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                Download Mod
+            </button>
+            <button id="back-btn"
+                    class="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md">
+                Back to Wiki Hub
+            </button>
+        </div>
     </div>
-  </div>
 </nav>
 
 <!-- ══════════════════════════════════════════════════
@@ -115,69 +115,69 @@
      ══════════════════════════════════════════════════ -->
 <aside id="sidebar"
        class="fixed top-16 left-0 w-64 h-full bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 transform -translate-x-full lg:translate-x-0 sidebar-transition z-40 overflow-y-auto">
-  <div class="p-4">
-    <div class="space-y-1">
+    <div class="p-4">
+        <div class="space-y-1">
 
-      <!-- ── Getting Started ── -->
-      <div class="mb-4">
-        <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Getting Started</h3>
-        <nav class="space-y-1">
-          <button onclick="showPage('home')"
-                  class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
-            <span>🏠</span><span>Home</span>
-          </button>
-          <button onclick="showPage('changelog')"
-                  class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
-            <span>📋</span><span>Changelog</span>
-          </button>
-        </nav>
-      </div>
+            <!-- ── Getting Started ── -->
+            <div class="mb-4">
+                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Getting Started</h3>
+                <nav class="space-y-1">
+                    <button onclick="showPage('home')"
+                            class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span>🏠</span><span>Home</span>
+                    </button>
+                    <button onclick="showPage('changelog')"
+                            class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span>📋</span><span>Changelog</span>
+                    </button>
+                </nav>
+            </div>
 
-      <!-- ── Category 1 (e.g. Items / Weapons / Blocks) ── -->
-      <!-- Duplicate and rename this block for each sidebar category you need -->
-      <div class="mb-4">
-        <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">CATEGORY_1_LABEL</h3>
-        <nav class="space-y-1">
-          <!--
-              Each button should call showPage('PAGE_ID').
-              PAGE_ID must match the id="page-PAGE_ID" div in the main content below.
-              Add an emoji or a small <img> before the label as needed.
-          -->
-          <button onclick="showPage('page-one')"
-                  class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
-            <span>⚔️</span><span>Page One</span>
-          </button>
-          <button onclick="showPage('page-two')"
-                  class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
-            <span>🛡️</span><span>Page Two</span>
-          </button>
-        </nav>
-      </div>
+            <!-- ── Category 1 (e.g. Items / Weapons / Blocks) ── -->
+            <!-- Duplicate and rename this block for each sidebar category you need -->
+            <div class="mb-4">
+                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">CATEGORY_1_LABEL</h3>
+                <nav class="space-y-1">
+                    <!--
+                        Each button should call showPage('PAGE_ID').
+                        PAGE_ID must match the id="page-PAGE_ID" div in the main content below.
+                        Add an emoji or a small <img> before the label as needed.
+                    -->
+                    <button onclick="showPage('page-one')"
+                            class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span>⚔️</span><span>Page One</span>
+                    </button>
+                    <button onclick="showPage('page-two')"
+                            class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span>🛡️</span><span>Page Two</span>
+                    </button>
+                </nav>
+            </div>
 
-      <!-- ── Category 2 ── -->
-      <div class="mb-4">
-        <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">CATEGORY_2_LABEL</h3>
-        <nav class="space-y-1">
-          <button onclick="showPage('page-three')"
-                  class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
-            <span>🧪</span><span>Page Three</span>
-          </button>
-        </nav>
-      </div>
+            <!-- ── Category 2 ── -->
+            <div class="mb-4">
+                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">CATEGORY_2_LABEL</h3>
+                <nav class="space-y-1">
+                    <button onclick="showPage('page-three')"
+                            class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span>🧪</span><span>Page Three</span>
+                    </button>
+                </nav>
+            </div>
 
-      <!-- ── Other ── -->
-      <div class="mb-4">
-        <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Other</h3>
-        <nav class="space-y-1">
-          <button onclick="showPage('enchantments')"
-                  class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
-            <span>✨</span><span>Enchantments</span>
-          </button>
-        </nav>
-      </div>
+            <!-- ── Other ── -->
+            <div class="mb-4">
+                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Other</h3>
+                <nav class="space-y-1">
+                    <button onclick="showPage('enchantments')"
+                            class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span>✨</span><span>Enchantments</span>
+                    </button>
+                </nav>
+            </div>
 
+        </div>
     </div>
-  </div>
 </aside>
 
 <!-- Mobile sidebar overlay -->
@@ -192,316 +192,316 @@
      Only the active one is visible at a time.
      ══════════════════════════════════════════════════ -->
 <main class="lg:ml-64 pt-16 min-h-screen">
-  <div id="content" class="p-6 max-w-4xl">
+    <div id="content" class="p-6 max-w-4xl">
 
-    <!-- ════════════════════════════════════════
-         HOME PAGE
-         ════════════════════════════════════════ -->
-    <div id="page-home" class="page-content content-fade">
+        <!-- ════════════════════════════════════════
+             HOME PAGE
+             ════════════════════════════════════════ -->
+        <div id="page-home" class="page-content content-fade">
 
-      <!-- Intro -->
-      <div class="mb-8">
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-          Welcome to MOD_NAME Wiki
-        </h1>
-        <p class="text-xl text-gray-600 dark:text-gray-300 mb-4">
-          MOD_SHORT_DESCRIPTION
-          <!-- ↑ One-liner that describes what the mod does -->
-        </p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 italic">
-          The wiki was last updated on:
-          <span id="last-updated">loading…</span>
-        </p>
-      </div>
+            <!-- Intro -->
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                    Welcome to MOD_NAME Wiki
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-4">
+                    MOD_SHORT_DESCRIPTION
+                    <!-- ↑ One-liner that describes what the mod does -->
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 italic">
+                    The wiki was last updated on:
+                    <span id="last-updated">loading…</span>
+                </p>
+            </div>
 
-      <!-- Features & Requirements -->
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <!-- Features card -->
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-          <h2 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">✨ Features</h2>
-          <ul class="space-y-2 text-gray-600 dark:text-gray-300 list-disc list-inside">
-            <!-- Add / remove list items to match your mod's feature set -->
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-          </ul>
-        </div>
-
-        <!-- Requirements card -->
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-          <h2 class="text-xl font-semibold mb-4 text-purple-600 dark:text-purple-400">🔧 Requirements</h2>
-          <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-            <li><strong>Minecraft:</strong> 1.XX – 1.XX</li>
-            <li><strong>Mod Loader:</strong> Forge / Fabric / NeoForge</li>
-            <li><strong>Dependencies:</strong> None</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- About the Mod -->
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-8">
-        <h2 class="text-xl font-semibold mb-3 text-emerald-600 dark:text-emerald-400">About the Mod</h2>
-        <p class="text-gray-700 dark:text-gray-300 mb-3">
-          <!-- General description / lore / backstory for the mod -->
-          MOD_ABOUT_PARAGRAPH_1
-        </p>
-        <p class="text-gray-700 dark:text-gray-300">
-          <!-- Credits -->
-          Developed by <strong>AUTHOR_NAME</strong>.
-        </p>
-      </div>
-
-    </div><!-- /page-home -->
-
-    <!-- ════════════════════════════════════════
-         CHANGELOG PAGE
-         Populated dynamically from JS data below.
-         ════════════════════════════════════════ -->
-    <div id="page-changelog" class="page-content hidden content-fade">
-      <div class="mb-8">
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Changelog</h1>
-        <p class="text-lg text-gray-600 dark:text-gray-300">
-          Follow the development of <strong>MOD_NAME</strong>. Latest updates and past releases are listed below.
-        </p>
-      </div>
-      <div id="changelog-container" class="space-y-10"></div>
-    </div><!-- /page-changelog -->
-
-    <!-- ════════════════════════════════════════
-         CONTENT PAGE TEMPLATE
-         Duplicate this block for every page you
-         need. Change the id, title, description,
-         and section anchors.
-         ════════════════════════════════════════ -->
-    <div id="page-page-one" class="page-content hidden content-fade">
-
-      <!-- Page Header -->
-      <div class="mb-8">
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Page One Title</h1>
-        <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
-          <p class="text-gray-700 dark:text-gray-300">
-            <!-- Brief introductory description of this page's content -->
-            Short description of what this page covers.
-          </p>
-        </div>
-      </div>
-
-      <!-- Table of Contents -->
-      <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-8">
-        <h2 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Contents</h2>
-        <ul class="space-y-1 text-sm">
-          <!-- Anchors must match id attributes on the <section> elements below -->
-          <li><a href="#p1-variants"   class="text-blue-600 dark:text-blue-400 hover:underline">1 Variants</a></li>
-          <li><a href="#p1-obtaining"  class="text-blue-600 dark:text-blue-400 hover:underline">2 Obtaining</a>
-            <ul class="ml-4 mt-1 space-y-1">
-              <li><a href="#p1-crafting" class="text-blue-600 dark:text-blue-400 hover:underline">2.1 Crafting</a></li>
-            </ul>
-          </li>
-          <li><a href="#p1-usage"      class="text-blue-600 dark:text-blue-400 hover:underline">3 Usage</a></li>
-          <li><a href="#p1-statistics" class="text-blue-600 dark:text-blue-400 hover:underline">4 Statistics</a></li>
-          <li><a href="#p1-enchantments" class="text-blue-600 dark:text-blue-400 hover:underline">5 Enchantments</a></li>
-          <li><a href="#p1-individual" class="text-blue-600 dark:text-blue-400 hover:underline">6 Individual Items</a></li>
-        </ul>
-      </div>
-
-      <!-- 1 · Variants -->
-      <section id="p1-variants" class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Variants</h2>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">
-          Describe the variants available for this item type.
-        </p>
-        <!--
-            Variant grid — JS can populate this, or you can hard-code item cards.
-            Example JS pattern:  document.getElementById('p1-variants-grid').innerHTML = ...
-        -->
-        <div id="p1-variants-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          <!--
-              Example static item card (copy and fill in for each variant if not using JS):
-              <div class="flex flex-col items-center p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
-                  <img src="ITEM_ICON_URL" alt="Item Name" class="w-12 h-12 image-render-pixel mb-2">
-                  <p class="text-xs text-center text-gray-700 dark:text-gray-300 font-medium">Item Name</p>
-              </div>
-          -->
-        </div>
-      </section>
-
-      <!-- 2 · Obtaining -->
-      <section id="p1-obtaining" class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Obtaining</h2>
-
-        <!-- 2.1 Crafting -->
-        <section id="p1-crafting" class="mb-6">
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-3">Crafting</h3>
-          <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Explain how items in this category are crafted.
-          </p>
-
-          <!--
-              Recipe display container — populated by JS render functions.
-              If you want a single static recipe, use the crafting-grid markup below.
-          -->
-          <div id="p1-crafting-list" class="space-y-6">
-            <!--
-                ── Static recipe example ──
-                Copy this block and fill in images/labels for a single recipe.
-
-                <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                    <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-3">Example Item Name</h4>
-                    <div class="flex items-center flex-wrap gap-4">
-                        <div class="recipe-grid">
-                            Row 1
-                            <div class="recipe-slot"><img src="ITEM1_URL" class="icon-32 image-render-pixel"></div>
-                            <div class="recipe-slot"><img src="ITEM1_URL" class="icon-32 image-render-pixel"></div>
-                            <div class="recipe-slot"></div>
-                            Row 2
-                            <div class="recipe-slot"><img src="ITEM2_URL" class="icon-32 image-render-pixel"></div>
-                            <div class="recipe-slot"><img src="ITEM2_URL" class="icon-32 image-render-pixel"></div>
-                            <div class="recipe-slot"></div>
-                            Row 3
-                            <div class="recipe-slot"><img src="STICK_URL" class="icon-32 image-render-pixel"></div>
-                            <div class="recipe-slot"></div>
-                            <div class="recipe-slot"></div>
-                        </div>
-                        <div class="recipe-arrow">→</div>
-                        Output
-                        <div class="recipe-slot">
-                            <img src="OUTPUT_URL" class="icon-32 image-render-pixel">
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Materials: X Item A + Y Item B</p>
+            <!-- Features & Requirements -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <!-- Features card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h2 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">✨ Features</h2>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300 list-disc list-inside">
+                        <!-- Add / remove list items to match your mod's feature set -->
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
                 </div>
-            -->
-          </div>
-        </section>
 
-      </section>
+                <!-- Requirements card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h2 class="text-xl font-semibold mb-4 text-purple-600 dark:text-purple-400">🔧 Requirements</h2>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li><strong>Minecraft:</strong> 1.XX – 1.XX</li>
+                        <li><strong>Mod Loader:</strong> Forge / Fabric / NeoForge</li>
+                        <li><strong>Dependencies:</strong> None</li>
+                    </ul>
+                </div>
+            </div>
 
-      <!-- 3 · Usage -->
-      <section id="p1-usage" class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Usage</h2>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">
-          Describe how players use these items in-game.
-        </p>
-        <!-- Add sub-sections (h3) as needed, e.g. Attacking, Blocking, etc. -->
-      </section>
+            <!-- About the Mod -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-8">
+                <h2 class="text-xl font-semibold mb-3 text-emerald-600 dark:text-emerald-400">About the Mod</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-3">
+                    <!-- General description / lore / backstory for the mod -->
+                    MOD_ABOUT_PARAGRAPH_1
+                </p>
+                <p class="text-gray-700 dark:text-gray-300">
+                    <!-- Credits -->
+                    Developed by <strong>AUTHOR_NAME</strong>.
+                </p>
+            </div>
 
-      <!-- 4 · Statistics -->
-      <section id="p1-statistics" class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Statistics</h2>
+        </div><!-- /page-home -->
 
-        <div class="overflow-x-auto mb-6">
-          <!--
-              Adjust column headers to match your item's relevant stats.
-              tbody can be populated by JS: document.getElementById('p1-stats-body').innerHTML = ...
-          -->
-          <table class="w-full border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden text-sm">
-            <thead class="bg-gray-100 dark:bg-gray-800">
-            <tr>
-              <th class="border-b border-gray-300 dark:border-gray-700 px-3 py-2 text-left">Item</th>
-              <th class="border-b border-gray-300 dark:border-gray-700 px-3 py-2 text-center">Stat 1</th>
-              <th class="border-b border-gray-300 dark:border-gray-700 px-3 py-2 text-center">Stat 2</th>
-              <th class="border-b border-gray-300 dark:border-gray-700 px-3 py-2 text-center">Durability</th>
-            </tr>
-            </thead>
-            <tbody id="p1-stats-body">
-            <!--
-                Static row example:
-                <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-                    <td class="px-3 py-2 flex items-center space-x-2">
-                        <img src="ITEM_ICON_URL" class="icon-24 image-render-pixel">
-                        <span>Item Name</span>
-                    </td>
-                    <td class="px-3 py-2 text-center">VALUE</td>
-                    <td class="px-3 py-2 text-center">VALUE</td>
-                    <td class="px-3 py-2 text-center">VALUE</td>
-                </tr>
-            -->
-            </tbody>
-          </table>
-        </div>
-      </section>
+        <!-- ════════════════════════════════════════
+             CHANGELOG PAGE
+             Populated dynamically from JS data below.
+             ════════════════════════════════════════ -->
+        <div id="page-changelog" class="page-content hidden content-fade">
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Changelog</h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    Follow the development of <strong>MOD_NAME</strong>. Latest updates and past releases are listed below.
+                </p>
+            </div>
+            <div id="changelog-container" class="space-y-10"></div>
+        </div><!-- /page-changelog -->
 
-      <!-- 5 · Enchantments -->
-      <section id="p1-enchantments" class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Enchantments</h2>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">
-          List which vanilla or custom enchantments apply to this item type.
-        </p>
-        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 ml-4 space-y-2">
-          <li><strong>Enchantment Name</strong> – What it does.</li>
-          <li><strong>Enchantment Name</strong> – What it does.</li>
-          <!-- Add / remove as needed -->
-        </ul>
-      </section>
+        <!-- ════════════════════════════════════════
+             CONTENT PAGE TEMPLATE
+             Duplicate this block for every page you
+             need. Change the id, title, description,
+             and section anchors.
+             ════════════════════════════════════════ -->
+        <div id="page-page-one" class="page-content hidden content-fade">
 
-      <!-- 6 · Individual Items -->
-      <section id="p1-individual" class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">Individual Items</h2>
+            <!-- Page Header -->
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Page One Title</h1>
+                <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+                    <p class="text-gray-700 dark:text-gray-300">
+                        <!-- Brief introductory description of this page's content -->
+                        Short description of what this page covers.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-8">
+                <h2 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Contents</h2>
+                <ul class="space-y-1 text-sm">
+                    <!-- Anchors must match id attributes on the <section> elements below -->
+                    <li><a href="#p1-variants"   class="text-blue-600 dark:text-blue-400 hover:underline">1 Variants</a></li>
+                    <li><a href="#p1-obtaining"  class="text-blue-600 dark:text-blue-400 hover:underline">2 Obtaining</a>
+                        <ul class="ml-4 mt-1 space-y-1">
+                            <li><a href="#p1-crafting" class="text-blue-600 dark:text-blue-400 hover:underline">2.1 Crafting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#p1-usage"      class="text-blue-600 dark:text-blue-400 hover:underline">3 Usage</a></li>
+                    <li><a href="#p1-statistics" class="text-blue-600 dark:text-blue-400 hover:underline">4 Statistics</a></li>
+                    <li><a href="#p1-enchantments" class="text-blue-600 dark:text-blue-400 hover:underline">5 Enchantments</a></li>
+                    <li><a href="#p1-individual" class="text-blue-600 dark:text-blue-400 hover:underline">6 Individual Items</a></li>
+                </ul>
+            </div>
+
+            <!-- 1 · Variants -->
+            <section id="p1-variants" class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Variants</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                    Describe the variants available for this item type.
+                </p>
+                <!--
+                    Variant grid — JS can populate this, or you can hard-code item cards.
+                    Example JS pattern:  document.getElementById('p1-variants-grid').innerHTML = ...
+                -->
+                <div id="p1-variants-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <!--
+                        Example static item card (copy and fill in for each variant if not using JS):
+                        <div class="flex flex-col items-center p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+                            <img src="ITEM_ICON_URL" alt="Item Name" class="w-12 h-12 image-render-pixel mb-2">
+                            <p class="text-xs text-center text-gray-700 dark:text-gray-300 font-medium">Item Name</p>
+                        </div>
+                    -->
+                </div>
+            </section>
+
+            <!-- 2 · Obtaining -->
+            <section id="p1-obtaining" class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Obtaining</h2>
+
+                <!-- 2.1 Crafting -->
+                <section id="p1-crafting" class="mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-3">Crafting</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Explain how items in this category are crafted.
+                    </p>
+
+                    <!--
+                        Recipe display container — populated by JS render functions.
+                        If you want a single static recipe, use the crafting-grid markup below.
+                    -->
+                    <div id="p1-crafting-list" class="space-y-6">
+                        <!--
+                            ── Static recipe example ──
+                            Copy this block and fill in images/labels for a single recipe.
+
+                            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+                                <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-3">Example Item Name</h4>
+                                <div class="flex items-center flex-wrap gap-4">
+                                    <div class="recipe-grid">
+                                        Row 1
+                                        <div class="recipe-slot"><img src="ITEM1_URL" class="icon-32 image-render-pixel"></div>
+                                        <div class="recipe-slot"><img src="ITEM1_URL" class="icon-32 image-render-pixel"></div>
+                                        <div class="recipe-slot"></div>
+                                        Row 2
+                                        <div class="recipe-slot"><img src="ITEM2_URL" class="icon-32 image-render-pixel"></div>
+                                        <div class="recipe-slot"><img src="ITEM2_URL" class="icon-32 image-render-pixel"></div>
+                                        <div class="recipe-slot"></div>
+                                        Row 3
+                                        <div class="recipe-slot"><img src="STICK_URL" class="icon-32 image-render-pixel"></div>
+                                        <div class="recipe-slot"></div>
+                                        <div class="recipe-slot"></div>
+                                    </div>
+                                    <div class="recipe-arrow">→</div>
+                                    Output
+                                    <div class="recipe-slot">
+                                        <img src="OUTPUT_URL" class="icon-32 image-render-pixel">
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Materials: X Item A + Y Item B</p>
+                            </div>
+                        -->
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- 3 · Usage -->
+            <section id="p1-usage" class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Usage</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                    Describe how players use these items in-game.
+                </p>
+                <!-- Add sub-sections (h3) as needed, e.g. Attacking, Blocking, etc. -->
+            </section>
+
+            <!-- 4 · Statistics -->
+            <section id="p1-statistics" class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Statistics</h2>
+
+                <div class="overflow-x-auto mb-6">
+                    <!--
+                        Adjust column headers to match your item's relevant stats.
+                        tbody can be populated by JS: document.getElementById('p1-stats-body').innerHTML = ...
+                    -->
+                    <table class="w-full border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden text-sm">
+                        <thead class="bg-gray-100 dark:bg-gray-800">
+                        <tr>
+                            <th class="border-b border-gray-300 dark:border-gray-700 px-3 py-2 text-left">Item</th>
+                            <th class="border-b border-gray-300 dark:border-gray-700 px-3 py-2 text-center">Stat 1</th>
+                            <th class="border-b border-gray-300 dark:border-gray-700 px-3 py-2 text-center">Stat 2</th>
+                            <th class="border-b border-gray-300 dark:border-gray-700 px-3 py-2 text-center">Durability</th>
+                        </tr>
+                        </thead>
+                        <tbody id="p1-stats-body">
+                        <!--
+                            Static row example:
+                            <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                                <td class="px-3 py-2 flex items-center space-x-2">
+                                    <img src="ITEM_ICON_URL" class="icon-24 image-render-pixel">
+                                    <span>Item Name</span>
+                                </td>
+                                <td class="px-3 py-2 text-center">VALUE</td>
+                                <td class="px-3 py-2 text-center">VALUE</td>
+                                <td class="px-3 py-2 text-center">VALUE</td>
+                            </tr>
+                        -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 5 · Enchantments -->
+            <section id="p1-enchantments" class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Enchantments</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                    List which vanilla or custom enchantments apply to this item type.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 ml-4 space-y-2">
+                    <li><strong>Enchantment Name</strong> – What it does.</li>
+                    <li><strong>Enchantment Name</strong> – What it does.</li>
+                    <!-- Add / remove as needed -->
+                </ul>
+            </section>
+
+            <!-- 6 · Individual Items -->
+            <section id="p1-individual" class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">Individual Items</h2>
+                <!--
+                    JS render target.
+                    Example JS: document.getElementById('p1-details').innerHTML = items.map(renderItem).join('');
+                -->
+                <div id="p1-details" class="space-y-8">
+                    <!--
+                        Static individual item card example:
+
+                        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                            <div class="bg-gray-50 dark:bg-gray-900 px-4 py-3 border-b border-gray-200 dark:border-gray-700 flex items-center space-x-3">
+                                <img src="ITEM_ICON_URL" alt="Item Name" class="w-10 h-10 image-render-pixel">
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Item Name</h3>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">Item description / lore.</p>
+                                Stat badges
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 px-2 py-1 rounded text-sm">⚔️ Damage: X</span>
+                                    <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-sm">⚡ Speed: X</span>
+                                    <span class="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 px-2 py-1 rounded text-sm">🔨 Durability: X</span>
+                                </div>
+                                Inline recipe
+                                <div class="flex items-center flex-wrap gap-4">
+                                    <div class="recipe-grid"> ... slots ... </div>
+                                    <div class="recipe-arrow">→</div>
+                                    <div class="recipe-slot"><img src="OUTPUT_URL" class="icon-32 image-render-pixel"></div>
+                                </div>
+                            </div>
+                        </div>
+                    -->
+                </div>
+            </section>
+
+        </div><!-- /page-page-one -->
+
+
+        <!-- ════════════════════════════════════════
+             SECOND CONTENT PAGE EXAMPLE
+             Duplicate the block above and rename
+             ids to add more pages.
+             ════════════════════════════════════════ -->
+        <div id="page-page-two" class="page-content hidden content-fade">
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Page Two Title</h1>
+                <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                    <p class="text-gray-700 dark:text-gray-300">Short description for page two.</p>
+                </div>
+            </div>
+            <!-- Table of Contents, Sections, etc. — follow the same pattern as page-one -->
+        </div><!-- /page-page-two -->
+
+
+        <!-- ════════════════════════════════════════
+             WIP PAGE PLACEHOLDER
+             Uncomment and rename when a page is not
+             ready for content yet.
+             ════════════════════════════════════════ -->
         <!--
-            JS render target.
-            Example JS: document.getElementById('p1-details').innerHTML = items.map(renderItem).join('');
+        <div id="page-page-three" class="page-content hidden content-fade">
+            <h1 class="text-3xl font-bold mb-6">Page Three</h1>
+            <p class="text-gray-600 dark:text-gray-400">Coming soon…</p>
+        </div>
         -->
-        <div id="p1-details" class="space-y-8">
-          <!--
-              Static individual item card example:
 
-              <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                  <div class="bg-gray-50 dark:bg-gray-900 px-4 py-3 border-b border-gray-200 dark:border-gray-700 flex items-center space-x-3">
-                      <img src="ITEM_ICON_URL" alt="Item Name" class="w-10 h-10 image-render-pixel">
-                      <h3 class="text-lg font-bold text-gray-900 dark:text-white">Item Name</h3>
-                  </div>
-                  <div class="p-4">
-                      <p class="text-gray-700 dark:text-gray-300 mb-4">Item description / lore.</p>
-                      Stat badges
-                      <div class="flex flex-wrap gap-2 mb-4">
-                          <span class="bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 px-2 py-1 rounded text-sm">⚔️ Damage: X</span>
-                          <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-sm">⚡ Speed: X</span>
-                          <span class="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 px-2 py-1 rounded text-sm">🔨 Durability: X</span>
-                      </div>
-                      Inline recipe
-                      <div class="flex items-center flex-wrap gap-4">
-                          <div class="recipe-grid"> ... slots ... </div>
-                          <div class="recipe-arrow">→</div>
-                          <div class="recipe-slot"><img src="OUTPUT_URL" class="icon-32 image-render-pixel"></div>
-                      </div>
-                  </div>
-              </div>
-          -->
-        </div>
-      </section>
-
-    </div><!-- /page-page-one -->
-
-
-    <!-- ════════════════════════════════════════
-         SECOND CONTENT PAGE EXAMPLE
-         Duplicate the block above and rename
-         ids to add more pages.
-         ════════════════════════════════════════ -->
-    <div id="page-page-two" class="page-content hidden content-fade">
-      <div class="mb-8">
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Page Two Title</h1>
-        <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-          <p class="text-gray-700 dark:text-gray-300">Short description for page two.</p>
-        </div>
-      </div>
-      <!-- Table of Contents, Sections, etc. — follow the same pattern as page-one -->
-    </div><!-- /page-page-two -->
-
-
-    <!-- ════════════════════════════════════════
-         WIP PAGE PLACEHOLDER
-         Uncomment and rename when a page is not
-         ready for content yet.
-         ════════════════════════════════════════ -->
-    <!--
-    <div id="page-page-three" class="page-content hidden content-fade">
-        <h1 class="text-3xl font-bold mb-6">Page Three</h1>
-        <p class="text-gray-600 dark:text-gray-400">Coming soon…</p>
     </div>
-    -->
-
-  </div>
 </main>
 
 
@@ -509,82 +509,82 @@
      JAVASCRIPT
      ══════════════════════════════════════════════════ -->
 <script>
-  /* ──────────────────────────────────────
-     Page routing
-     ────────────────────────────────────── */
-  let currentPage = 'home';
+    /* ──────────────────────────────────────
+       Page routing
+       ────────────────────────────────────── */
+    let currentPage = 'home';
 
-  function showPage(pageId) {
-    document.querySelectorAll('.page-content').forEach(p => p.classList.add('hidden'));
-    document.querySelectorAll('.sidebar-link').forEach(l =>
+    function showPage(pageId) {
+        document.querySelectorAll('.page-content').forEach(p => p.classList.add('hidden'));
+        document.querySelectorAll('.sidebar-link').forEach(l =>
             l.classList.remove('bg-blue-100', 'dark:bg-blue-900', 'text-blue-700', 'dark:text-blue-300'));
 
-    const target = document.getElementById(`page-${pageId}`);
-    if (target) {
-      target.classList.remove('hidden');
-      currentPage = pageId;
-      const active = document.querySelector(`button[onclick="showPage('${pageId}')"]`);
-      if (active) active.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-700', 'dark:text-blue-300');
+        const target = document.getElementById(`page-${pageId}`);
+        if (target) {
+            target.classList.remove('hidden');
+            currentPage = pageId;
+            const active = document.querySelector(`button[onclick="showPage('${pageId}')"]`);
+            if (active) active.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-700', 'dark:text-blue-300');
+        }
+        if (window.innerWidth < 1024) toggleSidebar();
+        window.scrollTo(0, 0);
     }
-    if (window.innerWidth < 1024) toggleSidebar();
-    window.scrollTo(0, 0);
-  }
 
-  /* ──────────────────────────────────────
-     Sidebar toggle (mobile)
-     ────────────────────────────────────── */
-  function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('-translate-x-full');
-    document.getElementById('sidebar-overlay').classList.toggle('hidden');
-  }
+    /* ──────────────────────────────────────
+       Sidebar toggle (mobile)
+       ────────────────────────────────────── */
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('-translate-x-full');
+        document.getElementById('sidebar-overlay').classList.toggle('hidden');
+    }
 
-  /* ──────────────────────────────────────
-     Dark-mode toggle
-     ────────────────────────────────────── */
-  function toggleTheme() {
-    document.documentElement.classList.toggle('dark');
-    localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-  }
+    /* ──────────────────────────────────────
+       Dark-mode toggle
+       ────────────────────────────────────── */
+    function toggleTheme() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    }
 
-  // Initialise theme from localStorage / OS preference
-  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
+    // Initialise theme from localStorage / OS preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    // Mark home as active on load
-    const homeBtn = document.querySelector("button[onclick=\"showPage('home')\"]");
-    if (homeBtn) homeBtn.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-700', 'dark:text-blue-300');
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mark home as active on load
+        const homeBtn = document.querySelector("button[onclick=\"showPage('home')\"]");
+        if (homeBtn) homeBtn.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-700', 'dark:text-blue-300');
 
-    // Close sidebar when clicking outside on mobile
-    document.addEventListener('click', function (e) {
-      const sidebar = document.getElementById('sidebar');
-      const toggle  = document.querySelector('button[onclick="toggleSidebar()"]');
-      if (window.innerWidth < 1024 && toggle &&
-              !sidebar.contains(e.target) && !toggle.contains(e.target) &&
-              !sidebar.classList.contains('-translate-x-full')) {
-        toggleSidebar();
-      }
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function (e) {
+            const sidebar = document.getElementById('sidebar');
+            const toggle  = document.querySelector('button[onclick="toggleSidebar()"]');
+            if (window.innerWidth < 1024 && toggle &&
+                !sidebar.contains(e.target) && !toggle.contains(e.target) &&
+                !sidebar.classList.contains('-translate-x-full')) {
+                toggleSidebar();
+            }
+        });
+
+        // Restore sidebar on desktop resize
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 1024) {
+                document.getElementById('sidebar').classList.remove('-translate-x-full');
+                document.getElementById('sidebar-overlay').classList.add('hidden');
+            }
+        });
     });
 
-    // Restore sidebar on desktop resize
-    window.addEventListener('resize', function () {
-      if (window.innerWidth >= 1024) {
-        document.getElementById('sidebar').classList.remove('-translate-x-full');
-        document.getElementById('sidebar-overlay').classList.add('hidden');
-      }
+    // Close sidebar with Escape key on mobile
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && window.innerWidth < 1024) {
+            const sidebar = document.getElementById('sidebar');
+            if (!sidebar.classList.contains('-translate-x-full')) toggleSidebar();
+        }
     });
-  });
-
-  // Close sidebar with Escape key on mobile
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && window.innerWidth < 1024) {
-      const sidebar = document.getElementById('sidebar');
-      if (!sidebar.classList.contains('-translate-x-full')) toggleSidebar();
-    }
-  });
 </script>
 
 <!-- ══════════════════════════════════════════════════
@@ -598,27 +598,27 @@
      DOWNLOAD MODAL  +  LAST-UPDATED via GitHub API
      ══════════════════════════════════════════════════ -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
 
-    /* ── Download modal ── */
-    const curseforgeUrl = "https://www.curseforge.com/minecraft/mc-mods/YOUR_MOD_SLUG";
-    const modrinthUrl   = "https://modrinth.com/mod/YOUR_MOD_SLUG";
-    // ↑ Replace YOUR_MOD_SLUG with the actual slug from each platform
+        /* ── Download modal ── */
+        const curseforgeUrl = "https://www.curseforge.com/minecraft/mc-mods/YOUR_MOD_SLUG";
+        const modrinthUrl   = "https://modrinth.com/mod/YOUR_MOD_SLUG";
+        // ↑ Replace YOUR_MOD_SLUG with the actual slug from each platform
 
-    const downloadBtn = document.getElementById("download-btn");
-    const backBtn     = document.getElementById("back-btn");
+        const downloadBtn = document.getElementById("download-btn");
+        const backBtn     = document.getElementById("back-btn");
 
-    if (backBtn) {
-      backBtn.addEventListener("click", () => {
-        window.location.href = "../wikis.html";
-        // ↑ Adjust the relative path to your wiki hub page
-      });
-    }
+        if (backBtn) {
+            backBtn.addEventListener("click", () => {
+                window.location.href = "../wikis.html";
+                // ↑ Adjust the relative path to your wiki hub page
+            });
+        }
 
-    if (downloadBtn) {
-      const modal = document.createElement("div");
-      modal.className = "fixed inset-0 bg-black/60 flex items-center justify-center z-[9999] hidden";
-      modal.innerHTML = `
+        if (downloadBtn) {
+            const modal = document.createElement("div");
+            modal.className = "fixed inset-0 bg-black/60 flex items-center justify-center z-[9999] hidden";
+            modal.innerHTML = `
               <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-80 text-center">
                 <h2 class="text-lg font-bold mb-4 text-gray-900 dark:text-white">Choose a platform</h2>
                 <div class="space-y-3">
@@ -636,50 +636,50 @@
                   </button>
                 </div>
               </div>`;
-      document.body.appendChild(modal);
+            document.body.appendChild(modal);
 
-      const closeModal = () => {
-        modal.classList.add("hidden");
-        document.body.style.overflow = "";
-      };
-      downloadBtn.addEventListener("click", () => {
-        modal.classList.remove("hidden");
-        document.body.style.overflow = "hidden";
-      });
-      modal.addEventListener("click", e => {
-        if (e.target === modal || e.target.id === "close-modal") closeModal();
-      });
-      document.addEventListener("keydown", e => {
-        if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
-      });
-    }
+            const closeModal = () => {
+                modal.classList.add("hidden");
+                document.body.style.overflow = "";
+            };
+            downloadBtn.addEventListener("click", () => {
+                modal.classList.remove("hidden");
+                document.body.style.overflow = "hidden";
+            });
+            modal.addEventListener("click", e => {
+                if (e.target === modal || e.target.id === "close-modal") closeModal();
+            });
+            document.addEventListener("keydown", e => {
+                if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+            });
+        }
 
-    /* ── Last-updated date from GitHub ── */
-    // Replace the values below with your own repo and file path.
-    const owner    = "YOUR_GITHUB_USERNAME";
-    const repo     = "YOUR_REPO_NAME";
-    const filePath = "path/to/your-wiki-file.html";
-    // Example: "src/wikis/my-mod.html"
+        /* ── Last-updated date from GitHub ── */
+        // Replace the values below with your own repo and file path.
+        const owner    = "YOUR_GITHUB_USERNAME";
+        const repo     = "YOUR_REPO_NAME";
+        const filePath = "path/to/your-wiki-file.html";
+        // Example: "src/wikis/my-mod.html"
 
-    const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&per_page=1`;
+        const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&per_page=1`;
 
-    fetch(url)
+        fetch(url)
             .then(res => { if (!res.ok) throw new Error("GitHub API error"); return res.json(); })
             .then(data => {
-              const el = document.getElementById("last-updated");
-              if (!el) return;
-              if (data.length > 0) {
-                el.textContent = new Date(data[0].commit.author.date)
+                const el = document.getElementById("last-updated");
+                if (!el) return;
+                if (data.length > 0) {
+                    el.textContent = new Date(data[0].commit.author.date)
                         .toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
-              } else {
-                el.textContent = "unknown";
-              }
+                } else {
+                    el.textContent = "unknown";
+                }
             })
             .catch(() => {
-              const el = document.getElementById("last-updated");
-              if (el) el.textContent = "unavailable";
+                const el = document.getElementById("last-updated");
+                if (el) el.textContent = "unavailable";
             });
-  });
+    });
 </script>
 
 </body>
