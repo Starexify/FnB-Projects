@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon"
-          href="https://github.com/Starexify/starexify.github.io/blob/main/src/assets/images/icon.png?raw=true">
-    <title>F&B Projects Hub</title>
-    <script type="module" src="ui.js" defer></script>
-    <script type="module" src="news.js" defer></script>
-    <link href="./output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/images/icon.png">
+  <title>F&B Projects Hub</title>
+  <script type="module" src="news.js" defer></script>
+  <script src="lib/UIController.js"></script>
+  <link href="./output.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-900 text-white">
-<nav-bar></nav-bar>
+<nav data-ui="nav-bar" class="navbar"></nav>
 
-<div class="max-w-6xl mx-auto py-8 flex-grow">
-    <!-- Header Section -->
-    <div class="text-center mb-12">
-        <fancy-title>Project Updates</fancy-title>
-        <p class="text-slate-400 text-lg">Latest changes and releases for our Minecraft mods</p>
-    </div>
+<div class="max-w-6xl mx-auto py-8 grow">
+  <!-- Header Section -->
+  <div class="text-center mb-12">
+    <h1 class="header">Project Updates</h1>
+    <p class="text-slate-400 text-lg">Latest changes and releases for our Minecraft mods</p>
+  </div>
 
-    <!-- News Feed -->
-    <div id="news-container" class="grid space-y-8 xl:px-0 px-3">
-        <!-- Articles will be loaded here by JavaScript -->
-    </div>
+  <!-- News Feed -->
+  <div id="news-container" class="grid space-y-8 xl:px-0 px-3">
+    <!-- Articles will be loaded here by JavaScript -->
+  </div>
 
-    <!-- Load More Button -->
-    <div id="load-more" class="text-center mt-12">
-        <button id="load-more-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-            Load More Updates
-        </button>
-    </div>
+  <!-- Load More Button -->
+  <div id="load-more" class="text-center mt-12">
+    <button id="load-more-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+      Load More Updates
+    </button>
+  </div>
 </div>
 
-<scroll-button></scroll-button>
-
-<fnb-footer class="bg-white dark:bg-gray-900 w-full"></fnb-footer>
+<div data-ui="scroll-button" class="scroll-button"></div>
+<footer data-ui="footer" class="bg-white dark:bg-gray-900 w-full"></footer>
 </body>
 </html>

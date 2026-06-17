@@ -1,15 +1,15 @@
 {
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/forms": "^0.5.11",
     "bun-plugin-tailwind": "^0.0.15",
     "jsdom": "^26.1.0",
     "node-fetch": "^3.3.2",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.3.1"
   },
   "name": "fnb-projects",
   "private": true,
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.12",
+    "@tailwindcss/cli": "^4.3.1",
     "@types/bun": "latest",
     "live-server": "^1.2.2"
   },
@@ -20,7 +20,7 @@
     "dev": "bun run watch-css & bun run serve"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.9.2"
   },
   "module": "src/index.ts",
   "type": "module"
