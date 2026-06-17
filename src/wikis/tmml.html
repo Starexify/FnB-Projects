@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+          href="https://github.com/Starexify/FnB-Projects/blob/main/src/assets/images/icons/tmml.gif?raw=true">
+    <title>Transport Modules: Modular Logistics Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sidebar-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+        .content-fade {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            grid-template-rows: repeat(3, 50px);
+            gap: 3px;
+            background: #374151;
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #4b5563;
+        }
+        .recipe-slot {
+            width: 50px;
+            height: 50px;
+            background: #1f2937;
+            border: 2px solid #4b5563;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .recipe-arrow {
+            font-size: 2rem;
+            color: #9ca3af;
+            margin: 0 20px;
+            align-self: center;
+        }
+        .image-render-pixel {
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+        }
+        .icon-32 { width: 32px; height: 32px; }
+        .icon-24 { width: 24px; height: 24px; }
+        .icon-16 { width: 16px; height: 16px; }
+
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
+<!-- Top Navigation Bar -->
+<nav class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-3 fixed top-0 left-0 right-0 z-50">
+    <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <button class="lg:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md" onclick="toggleSidebar()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div class="flex items-center space-x-3">
+                <img src="https://github.com/Starexify/FnB-Projects/blob/main/src/assets/images/icons/tmml.gif?raw=true"
+                     alt="BSR Logo" class="w-8 h-8">
+                <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">Transport Modules: Modular Logistics Wiki</h1>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button id="download-btn"
+                    type="button"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                Download Mod
+            </button>
+            <button id="back-btn"
+                    class="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md">
+                Back to Wiki Hub
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Sidebar -->
+<aside id="sidebar" class="fixed top-16 left-0 w-64 h-full bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 transform -translate-x-full lg:translate-x-0 sidebar-transition z-40">
+    <div class="p-4">
+        <div class="space-y-1">
+            <!-- Getting Started -->
+            <div class="mb-4">
+                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Getting Started</h3>
+                <nav class="space-y-1">
+                    <button onclick="showPage('home')" class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span>🏠</span>
+                        <span>Home</span>
+                    </button>
+                    <button onclick="showPage('changelog')" class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span>📋</span>
+                        <span>Changelog</span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Components -->
+            <div class="mb-4">
+                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Components</h3>
+                <nav class="space-y-1">
+                    <button onclick="showPage('void-bottle')" class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span></span>
+                        <span>Void Bottle</span>
+                    </button>
+                </nav>
+            </div>
+            <!-- Transport Modules -->
+            <div class="mb-4">
+                <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Transport Modules</h3>
+                <nav class="space-y-1">
+                    <button onclick="showPage('block-tm')" class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span></span>
+                        <span>Block Transport Module</span>
+                    </button>
+                    <button onclick="showPage('fluid-tm')" class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span></span>
+                        <span>Fluid Transport Module</span>
+                    </button>
+                    <button onclick="showPage('entity-tm')" class="sidebar-link w-full text-left px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                        <span></span>
+                        <span>Entity Transport Module</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<!-- Overlay for mobile -->
+<div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden hidden" onclick="toggleSidebar()"></div>
+
+<!-- Main Content -->
+<main class="lg:ml-64 pt-16 min-h-screen">
+    <div id="content" class="p-6 max-w-4xl">
+        <!-- Home Page -->
+        <div id="page-home" class="page-content content-fade">
+            <!-- Intro -->
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                    Welcome to Transport Modules: Modular Logistics Wiki
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-4">
+                    The place where you can find any information about Transport Modules: Modular Logistics.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 italic">
+                    The wiki was last updated on:
+                    <span id="last-updated">loading…</span>
+                </p>
+            </div>
+
+            <!-- Features & Requirements -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <!-- Features -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h2 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">✨ Features</h2>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300 list-disc list-inside">
+                        <li>Void Bottle</li>
+                        <li>Block Transport Module</li>
+                        <li>Fluid Transport Module</li>
+                        <li>Entity Transport Module</li>
+                    </ul>
+                </div>
+
+                <!-- Requirements -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h2 class="text-xl font-semibold mb-4 text-purple-600 dark:text-purple-400">🔧 Requirements</h2>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li><strong>Minecraft:</strong> 1.19.2 – 1.21.5</li>
+                        <li><strong>Mod Loader:</strong> Forge / Fabric / NeoForge</li>
+                        <li><strong>Dependencies:</strong> None</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Developer & Origin Info -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-8">
+                <h2 class="text-xl font-semibold mb-3 text-emerald-600 dark:text-emerald-400">About the Mod</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-3">
+                   Simplify your logistics with Transport Modules: Modular Logistics. Transport essential blocks like chests, spawners, and shulker boxes and more with ease. My modular system offers flexible and efficient transport solutions.
+                </p>
+                <p class="text-gray-700 dark:text-gray-300">
+                    Developed primarily by <strong>Foxirion</strong>, with few code fix contributions from
+                    <strong>ImVeryBad</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Changelog Page -->
+        <div id="page-changelog" class="page-content hidden content-fade">
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Changelog</h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    Follow the development of <strong>Transport Modules: Modular Logistics</strong>. Latest updates and past releases are listed below.
+                </p>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    Note: The remainging changelogs will be uploaded soon.
+                </p>
+            </div>
+            <div id="changelog-container" class="space-y-10"></div>
+        </div>
+
+        <!-- Void Bottle Page -->
+        <div id="page-void-bottle" class="page-content hidden content-fade">
+            <!-- Page Header -->
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Void Bottle</h1>
+                <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+                    <p class="text-gray-700 dark:text-gray-300">
+                        The <strong>Void Bottle</strong> is more than just an ingredient - it's your very own pocket-sized black hole,
+                        ready to devour anything you throw at it. A crucial component in crafting modules, this enigmatic bottle
+                        holds the key to unlocking a world of possibilities.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contents -->
+            <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-8">
+                <h2 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Contents</h2>
+                <ul class="space-y-1 text-sm">
+                    <li><a href="#void-bottle-item" class="text-blue-600 dark:text-blue-400 hover:underline">1 The Item</a></li>
+                    <li><a href="#void-bottle-obtaining" class="text-blue-600 dark:text-blue-400 hover:underline">2 Obtaining</a></li>
+                    <li><a href="#void-bottle-usage" class="text-blue-600 dark:text-blue-400 hover:underline">3 Usages</a>
+                        <ul class="ml-4 mt-1 space-y-1">
+                            <li><a href="#void-bottle-modules" class="text-blue-600 dark:text-blue-400 hover:underline">3.1 Crafting Transport Modules</a></li>
+                            <li><a href="#void-bottle-drinking" class="text-blue-600 dark:text-blue-400 hover:underline">3.2 Embrace the Void (Drinking it)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 1 · The Item -->
+            <section id="void-bottle-item" class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">The Item</h2>
+                <div class="flex flex-col sm:flex-row items-start gap-6">
+                    <!-- Item image placeholder -->
+                    <div class="flex-shrink-0 flex flex-col items-center">
+                        <div class="w-24 h-24 bg-gray-100 dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg flex items-center justify-center">
+                             <img src="https://github.com/Foxirion/Transport-Module-Modular-Logistics/blob/1.21-neo/src/main/resources/assets/tmml/textures/item/void_bottle.png?raw=true" alt="Void Bottle" class="w-20 h-20 image-render-pixel">
+                        </div>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">Void Bottle</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-3">
+                            The <strong>Void Bottle</strong> is a unique material item that captures a fragment of the void from End
+                            portals and gateways. It serves as a key ingredient in the mod's crafting system and carries a powerful
+                            (and dangerous) secondary use.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2 · Obtaining -->
+            <section id="void-bottle-obtaining" class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Obtaining</h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                    Approach an <strong>End Portal</strong> or <strong>End Gateway</strong> and right-click with a
+                    <strong>Glass Bottle</strong>. This action will allow you to collect a little bit of void,
+                    transforming your glass bottle into a Void Bottle - your very own pocket-sized black hole!
+                </p>
+
+                <!-- Obtaining GIF placeholder -->
+                <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 inline-block w-full max-w-md">
+                    <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">How to obtain</p>
+                    <div class="w-full aspect-video bg-gray-100 dark:bg-gray-900 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg flex items-center justify-center">
+                         <img src="VOID_BOTTLE_OBTAINING_GIF_URL" alt="Obtaining the Void Bottle" class="max-w-full h-auto rounded-lg">
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 text-center mt-2">Right-clicking an End Portal / Gateway with a Glass Bottle</p>
+                </div>
+            </section>
+
+            <!-- 3 · Usages -->
+            <section id="void-bottle-usage" class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Usages</h2>
+
+                <!-- 3.1 Crafting Transport Modules -->
+                <section id="void-bottle-modules" class="mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-3">1) Crafting Transport Modules</h3>
+                    <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            As a key ingredient, the Void Bottle unlocks the potential to craft a variety of
+                            <strong>transport modules</strong>. These modules will be essential for your logistical endeavors
+                            within the mod, allowing you to move items, resources, and even yourself across the map with ease.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 3.2 Drinking -->
+                <section id="void-bottle-drinking" class="mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-3">2) Embrace the Void (Drinking it)</h3>
+                    <div class="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
+                        <p class="text-gray-700 dark:text-gray-300 mb-3">
+                            If you're feeling bold and your survival instincts are waning, the Void Bottle offers a final,
+                            albeit permanent, solution. <strong>Drinking the void</strong> within the bottle will instantly end
+                            your journey in the game - even in <strong>Creative mode</strong>.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            This is a risky move, especially in <strong>Hardcore mode</strong>, where death is final. Think
+                            carefully before taking this step, as it will erase your progress and leave you with a blank slate.
+                        </p>
+                    </div>
+                    <div class="bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            <strong>⚠️ Warning:</strong> If you don't have <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded text-sm">keepInventory true</code>,
+                            all items from your inventory will be <strong>permanently deleted</strong> upon death from drinking the Void Bottle.
+                        </p>
+                    </div>
+                </section>
+            </section>
+        </div>
+
+        <!-- Placeholder for wip pages example-->
+                <div id="page-block-tm" class="page-content hidden content-fade">
+                    <h1 class="text-3xl font-bold mb-6">Block Transport Module</h1>
+                    <p class="text-gray-600 dark:text-gray-400">Block Transport Module guide coming soon...</p>
+                </div>
+
+                <div id="page-fluid-tm" class="page-content hidden content-fade">
+                    <h1 class="text-3xl font-bold mb-6">Fluid Transport Module</h1>
+                    <p class="text-gray-600 dark:text-gray-400">Fluid Transport Module documentation coming soon...</p>
+                </div>
+
+                <div id="page-entity-tm" class="page-content hidden content-fade">
+                    <h1 class="text-3xl font-bold mb-6">Entity Transport Module</h1>
+                    <p class="text-gray-600 dark:text-gray-400">Entity Transport Module guide coming soon...</p>
+                </div>
+    </div>
+</main>
+
+<script>
+    let currentPage = 'home';
+
+    function showPage(pageId) {
+        // Hide all pages
+        document.querySelectorAll('.page-content').forEach(page => {
+            page.classList.add('hidden');
+        });
+
+        // Remove active state from all sidebar links
+        document.querySelectorAll('.sidebar-link').forEach(link => {
+            link.classList.remove('bg-blue-100', 'dark:bg-blue-900', 'text-blue-700', 'dark:text-blue-300');
+        });
+
+        // Show selected page
+        const targetPage = document.getElementById(`page-${pageId}`);
+        if (targetPage) {
+            targetPage.classList.remove('hidden');
+            currentPage = pageId;
+
+            // Find and activate the correct sidebar link
+            const activeLink = document.querySelector(`button[onclick="showPage('${pageId}')"]`);
+            if (activeLink) {
+                activeLink.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-700', 'dark:text-blue-300');
+            }
+        }
+
+        // Close mobile sidebar
+        if (window.innerWidth < 1024) {
+            toggleSidebar();
+        }
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+    }
+
+    function toggleTheme() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    }
+
+    // Initialize theme on page load
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+
+    // Initialize page when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set home as active on load
+        const homeButton = document.querySelector('button[onclick="showPage(\'home\')"]');
+        if (homeButton) {
+            homeButton.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-700', 'dark:text-blue-300');
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(e) {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.querySelector('button[onclick="toggleSidebar()"]');
+
+            if (window.innerWidth < 1024 &&
+                !sidebar.contains(e.target) &&
+                !sidebarToggle.contains(e.target) &&
+                !sidebar.classList.contains('-translate-x-full')) {
+                toggleSidebar();
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 1024) {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.getElementById('sidebar-overlay');
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && window.innerWidth < 1024) {
+            const sidebar = document.getElementById('sidebar');
+            if (!sidebar.classList.contains('-translate-x-full')) {
+                toggleSidebar();
+            }
+        }
+    });
+</script>
+<script src="./tmmlWiki.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const owner = "Foxirion";
+        const repo  = "FnB-Projects";
+        const filePath = "src/wikis/tmml.html";
+        const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&per_page=1`;
+
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error("GitHub API error");
+            const data = await res.json();
+            if (data.length > 0) {
+                const isoDate = data[0].commit.author.date;
+                const formatted = new Date(isoDate).toLocaleDateString(undefined,
+                    { year: 'numeric', month: 'long', day: 'numeric' });
+                document.getElementById("last-updated").textContent = formatted;
+            } else {
+                document.getElementById("last-updated").textContent = "unknown";
+            }
+        } catch (e) {
+            console.error(e);
+            document.getElementById("last-updated").textContent = "error";
+        }
+    });
+</script>
+
+
+</body>
+</html>
