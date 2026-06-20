@@ -4,6 +4,25 @@ import { NewsArticle } from "./ui_elements/newsArticle.js";
 export const articlesData = [
     {
         type: "mod",
+        modName: "Hexxit Gear R",
+        version: "v1.0.0 for NeoForge 26.2",
+        title: "Ported to Latest",
+        date: "June 20, 2026",
+        description: "The latest version of HGR comes to 26.2.",
+        iconUrl: "assets/images/icons/hgr.png",
+        badgeColor: "bg-green-600",
+        badgeText: "v1.0.0 for 26.2 Released",
+        tags: "Port",
+        primaryAction: "Download",
+        curseforgeUrl: "https://www.curseforge.com/minecraft/mc-mods/hexxit-gear-r/files/8286440",
+        modrinthUrl: "https://modrinth.com/mod/hexxit-gear-r/version/geyYVMx4",
+        secondaryAction: "Changelog",
+        changelogContent: `
+## Extra
+- ported to NeoForge 26.2`
+    },
+    {
+        type: "mod",
         modName: "Big Swords R",
         version: "v1.0.0 for NeoForge 26.2",
         title: "Ported to Latest",
