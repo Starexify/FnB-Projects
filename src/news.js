@@ -8,14 +8,14 @@ export const articlesData = [
         version: "v1.1.0 for NeoForge 26.2",
         title: "Copper Shields and More!",
         date: "June 26, 2026",
-        description: "The latest version of BSR comes to 26.2 with a brand-new copper shields, an upgraded shields tooltip, and more.",
+        description: "The latest version brings BSR to 26.2 with a brand-new copper shields, an upgraded shields tooltip, and more.",
         iconUrl: "assets/images/icons/bsr.png",
         badgeColor: "bg-green-600",
         badgeText: "v1.1.0 for 26.2 Released",
         tags: "Port,Adjustment,Bug Fixes,New Content",
         primaryAction: "Download",
-        curseforgeUrl: "",
-        modrinthUrl: "",
+        curseforgeUrl: "https://www.curseforge.com/minecraft/mc-mods/big-swords-r/files/8322298",
+        modrinthUrl: "https://modrinth.com/mod/big-swords-r/version/I6cDdraR",
         secondaryAction: "Changelog",
         changelogContent: `
 ## NEW
