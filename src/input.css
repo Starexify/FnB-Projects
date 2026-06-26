@@ -24,6 +24,6 @@
   }
 
   .scroll-button {
-    @apply fixed sm:bottom-4 bottom-16 right-4 bg-white dark:bg-slate-900 size-10 rounded-full p-2 ring-1 ring-gray-900/5 dark:ring-white/20 shadow-lg transition-opacity duration-300 hover:bg-slate-600;
+    @apply fixed sm:bottom-4 bottom-25 right-4 bg-white dark:bg-slate-900 size-10 rounded-full p-2 ring-1 ring-gray-900/5 dark:ring-white/20 shadow-lg transition-opacity duration-300 hover:bg-slate-600;
   }
 }
