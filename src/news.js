@@ -4,6 +4,49 @@ import { NewsArticle } from "./ui_elements/newsArticle.js";
 export const articlesData = [
     {
         type: "mod",
+        modName: "Big Swords R",
+        version: "v1.1.0 for NeoForge 26.2",
+        title: "Copper Shields and More!",
+        date: "June 26, 2026",
+        description: "The latest version of BSR comes to 26.2 with a brand new copper shields, upgraded shields tooltip and more",
+        iconUrl: "assets/images/icons/bsr.png",
+        badgeColor: "bg-green-600",
+        badgeText: "v1.1.0 for 26.2 Released",
+        tags: "Port,Adjustment,Bug Fixes,New Content",
+        primaryAction: "Download",
+        curseforgeUrl: "",
+        modrinthUrl: "",
+        secondaryAction: "Changelog",
+        changelogContent: `
+## NEW
+- added Copper Shield and its oxidized variants (Exposed, Weathered, Oxidized)
+- added Gilded Copper and its oxidized variants (Exposed, Weathered, Oxidized)
+
+## Overhaul
+- now the shields give a more detailed tooltip when hovering SHIFT over them
+
+## Items
+
+### Wooden Shield
+- can now catch arrows with effects and spectral arrows
+
+### Stone Shield
+- pickaxes deal 2x damage to the shield
+
+### Iron Shield
+- now the shield can degrade when dropped underwater
+
+## Fix
+- crafting with a blood vial now drops the item if the holder's inventory is full
+- Livingmetal and Biomass Spears can now be enchanted with spear enchantments
+- fix Gilded Skull Shield chances
+- fix shield model clipping through layered skins
+
+## Extra
+- blood vial now plays sounds when filling or emptying it`
+    },
+    {
+        type: "mod",
         modName: "Hexxit Gear Weaponry",
         version: "v1.0.0 for NeoForge 26.2",
         title: "Ported to Latest",
