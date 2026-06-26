@@ -146,7 +146,7 @@ function renderMobile(element, links) {
   const middleIndex = Math.floor(links.length / 2);
 
   let html = `
-    <div class="fixed dark:bg-slate-800 z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-t-full -bottom-1 left-1/2 dark:border-gray-600 text-xs">
+    <div class="fixed dark:bg-slate-800 z-50 w-[calc(100%-2rem)] h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:border-gray-600 text-xs shadow-lg overflow-hidden">
         <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
     `;
 
@@ -154,14 +154,12 @@ function renderMobile(element, links) {
     if (i === middleIndex) {
       html += `
             <div class="flex items-center justify-center">
-                <img src="assets/images/icon.png" alt="F&B Logo" class="size-16 object-contain">
+                <img src="assets/images/icon.png" alt="F&B Logo" class="size-12 object-contain">
             </div>`;
     }
 
     const isActive = i === activeIndex;
-    let extraClasses = isActive ? "dark:bg-slate-700" : "hover:bg-gray-50 dark:hover:bg-gray-500";
-    if (i === 0) extraClasses += " rounded-tl-full";
-    if (i === links.length - 1) extraClasses += " rounded-tr-full";
+    let extraClasses = isActive ? "dark:bg-slate-700 bg-gray-100" : "hover:bg-gray-50 dark:hover:bg-gray-500";
 
     html += `
         <a class="inline-flex flex-col items-center justify-center px-5 ${extraClasses} group" ${isActive ? "" : `href="${link.href}"`}>
