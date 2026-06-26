@@ -11,7 +11,8 @@ const registry = {
   'download-counter': applyDownloadCounter,
   'nav-bar': applyNavigationBar,
   'scroll-button': applyScrollButton,
-  'mod-card': applyModCard
+  'mod-card': applyModCard,
+  'wiki-card': applyWikiCard
 };
 
 function init() {
@@ -306,7 +307,7 @@ function applyModCard(element) {
               <i class="fas fa-cube text-lg text-white"></i>
             </div>
           </div>
-          <h2 class="text-2xl font-bold text-white ">${modName}</h2>
+          <h2 class="text-2xl font-bold text-white">${modName}</h2>
         </div>
         
         <div class="flex flex-wrap justify-center gap-2 select-none">
@@ -337,6 +338,53 @@ function applyModCard(element) {
       if (counterTarget) counterTarget.textContent = "Unavailable";
     });
   }
+}
+
+function applyWikiCard(element) {
+  const id = element.id || element.getAttribute("wiki-id") || "";
+  const modId = element.getAttribute("modId") || id;
+  const title = element.getAttribute("wiki-title") || element.textContent?.trim() || "Wiki";
+  const description = element.getAttribute("description") || "";
+  const logoSrc = element.getAttribute("logo-src") || `assets/images/logos/${id}.png`;
+  const iconSrc = element.getAttribute("icon-src") || `assets/images/icons/${id}.png`;
+  const linkUrl = element.getAttribute("href") || `./wikis/${modId}.html`;
+
+  element.innerHTML = `
+  <div class="bg-gray-800/90 rounded-2xl shadow-2xl border border-gray-700 xl:w-110 overflow-hidden relative cursor-pointer transition-all duration-300 hover:scale-105 group"
+         onclick="window.open('${linkUrl}','_self')">
+        
+        <div class="p-4 pb-4 flex items-center justify-center">
+            <div class="h-24 w-full overflow-hidden flex items-center justify-center">
+                <img src="${logoSrc}" alt="${title} Logo" class="h-full object-contain w-full p-2"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="size-full bg-linear-to-r from-blue-500 to-indigo-500 rounded-xl hidden items-center justify-center">
+                    <span class="text-white font-bold text-2xl">${title.toUpperCase()}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-8 pb-8 pt-4 flex flex-col items-center text-center">
+            <div class="flex items-center justify-center gap-3 mb-3">
+                <div class="size-10 rounded-lg overflow-hidden shadow-md bg-gray-700/30 flex items-center justify-center shrink-0">
+                    <img src="${iconSrc}" alt="${title} Icon"
+                         class="w-full h-full object-cover rounded-lg"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="size-full bg-linear-to-br from-blue-500 to-indigo-500 rounded-lg hidden items-center justify-center">
+                        <i class="fas fa-book text-sm text-white"></i>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-bold text-white transition-colors">${title}</h2>
+            </div>
+            
+            <p class="text-gray-300 text-center text-sm leading-relaxed mb-2">${description}</p>
+            
+            <div class="flex items-center gap-2 text-blue-400 font-semibold text-sm group-hover:gap-3 transition-all">
+                <span>Explore Wiki</span>
+                <span class="text-lg transition-transform group-hover:translate-x-1">→</span>
+            </div>
+        </div>
+    </div>
+  `;
 }
 
 async function fetchDownloadsData(cfId, mrId) {
