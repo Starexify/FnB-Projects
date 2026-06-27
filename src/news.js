@@ -5,6 +5,93 @@ export const articlesData = [
     {
         type: "mod",
         modName: "Big Swords R",
+        version: "v1.0.0 for Fabric 26.2",
+        title: "Now on Fabric 26.2!",
+        date: "June 27, 2026",
+        description: "The new release introduces the latest version of BSR from NeoForge to Fabric (26.2).",
+        iconUrl: "assets/images/icons/bsr.png",
+        badgeColor: "bg-green-600",
+        badgeText: "v1.0.0 for 26.2 Released",
+        tags: "Port,Adjustment,Bug Fixes,New Content",
+        primaryAction: "Download",
+        curseforgeUrl: "https://www.curseforge.com/minecraft/mc-mods/big-swords-r/files/8328721",
+        modrinthUrl: "https://modrinth.com/mod/big-swords-r/version/LE3HKtAv",
+        secondaryAction: "Changelog",
+        changelogContent: `
+## NEW
+- added Copper Shield and its oxidized variants (Exposed, Weathered, Oxidized)
+- added Gilded Copper and its oxidized variants (Exposed, Weathered, Oxidized)
+- added Biomass Spear
+- added Livingmetal Spear
+- added Copper Scythe
+- added Copper Glaive
+- added Copper Big Sword
+
+## Balance Changes
+### Attack Damage Changes
+- Livingmetal Shovel: 5 -> 5.5
+- Livingmetal Sword: 6.5 -> 7
+- Livingmetal Pickaxe: 4.5 -> 5
+- Livingmetal Axe: 9.5 -> 10
+- Wooden Big Sword: 7.5 -> 8
+- Stone Big Sword: 8.5 -> 9
+- Iron Big Sword: 9.5 -> 10
+- Golden Big Sword: 7.5 -> 8
+- Diamond Big Sword: 10.5 -> 11
+- Netherite Big Sword: 11.5 -> 12
+- Obsidian Big Sword: 11 -> 10
+- Ender Big Sword: 13 -> 14
+- Biomass Big Sword: 9.5 -> 10
+- Quartz Big Sword: 8.5 -> 9
+- Livingmetal Glaive: 5.5 -> 5
+- Livingmetal Scythe: 4.5 -> 6
+- Bone Sctyhe: 1.5 -> 2
+- Soul Reaper: 1.5 -> 2
+
+### Charged Damage Changes
+- Diamond Glaive: 4.5-5.5 -> 5-6
+- Netherite Glaive: 5.5-6.5 -> 6-7
+- Biomass Glaive: 5.4-6 -> 5-6
+- Livingmetal Glaive: 4.5-5.5 -> 4-5
+- Livingmetal Scythe: 3.5-4.5 -> 5-6
+- Stone Glaive: 3.5-4.5 -> 4-5
+- Stone Scythe: 2.5-3.5 -> 3-4
+- Diamond Scythe: 3.5-4.5 -> 4-5
+- Netherite Scythe: 4.5-5.5 -> 5-6
+- Biomass Scythe: 3-4.5 -> 3-5
+
+### Drops
+- Creepers, Phantoms and Shulkers no longer drop blood
+- Breezes, Shulkers and Sulfur Cubes no longer drop souls
+
+## Overhaul
+- now the shields give a more detailed tooltip when hovering SHIFT over them
+
+## Items
+
+### Wooden Shield
+- can now catch arrows with effects and spectral arrows
+
+### Stone Shield
+- pickaxes deal 2x damage to the shield
+
+### Iron Shield
+- now the shield can degrade when dropped underwater
+
+## Fix
+- crafting with a blood vial now drops the item if the holder's inventory is full
+- Livingmetal and Biomass Spears can now be enchanted with spear enchantments
+- fix Gilded Skull Shield chances
+- fix shield model clipping through layered skins
+
+## Extra
+- blood vial now plays sounds when filling or emptying it
+- renamed 'Biomass Seed' to 'Biomass Seeds'
+- ported everything to NeoForge 26.2`
+    },
+    {
+        type: "mod",
+        modName: "Big Swords R",
         version: "v1.1.0 for NeoForge 26.2",
         title: "Copper Shields and More!",
         date: "June 26, 2026",
