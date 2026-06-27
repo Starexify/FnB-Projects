@@ -4,6 +4,25 @@ import { NewsArticle } from "./ui_elements/newsArticle.js";
 export const articlesData = [
     {
         type: "mod",
+        modName: "Hexxit Gear Weaponry",
+        version: "v1.0.0 for Fabric 26.2",
+        title: "Ported to Latest",
+        date: "June 27, 2026",
+        description: "The latest version of HGW comes to Fabric 26.2.",
+        iconUrl: "assets/images/icons/hgw.png",
+        badgeColor: "bg-green-600",
+        badgeText: "v1.0.0 for 26.2 Released",
+        tags: "Port",
+        primaryAction: "Download",
+        curseforgeUrl: "https://www.curseforge.com/minecraft/mc-mods/hgw/files/8330267",
+        modrinthUrl: "https://modrinth.com/mod/hgw/version/VC1JHBfX",
+        secondaryAction: "Changelog",
+        changelogContent: `
+## Extra
+- ported to Fabric 26.2`
+    },
+    {
+        type: "mod",
         modName: "Hexxit Gear R",
         version: "v1.0.0 for Fabric 26.2",
         title: "Ported to Latest",
